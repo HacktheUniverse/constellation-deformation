@@ -26,21 +26,31 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 // create the particle variables
-var particleCount = 1800,
+var particleCount = stars.length,
     particles = new THREE.Geometry(),
     pMaterial = new THREE.PointCloudMaterial({
       color: 0xFFFFFF,
-      size: 20
+      size: 20000
     });
+
+function write_new_coords(star, date) {
+
+}
+var time = 0;
 
 // now create the individual particles
 for (var p = 0; p < particleCount; p++) {
+  var star = stars[p];
+  var coords = star['pos'];
+  console.log(coords);
 
-  // create a particle with random
-  // position values, -250 -> 250
-  var pX = Math.random() * 500 - 250,
-      pY = Math.random() * 500 - 250,
-      pZ = Math.random() * 500 - 250,
+  var velocities = star['speed']
+  console.log(velocities)
+
+
+  var pX = coords[0] * ,
+      pY = coords[1],
+      pZ = coords[2],
       particle = new THREE.Particle(
         new THREE.Vector3(pX, pY, pZ)
       );
@@ -48,15 +58,13 @@ for (var p = 0; p < particleCount; p++) {
   // add it to the geometry
   particles.vertices.push(particle);
 }
-
+console.log(particles.vertices);
 // create the particle system
 var particleSystem = new THREE.PointCloud(
     particles,
     pMaterial);
 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-var cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
 
 camera.position.z = 5;
 

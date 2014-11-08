@@ -1,16 +1,48 @@
 <!doctype html>
 <html>
   <head>
-  		<style type="text/css">
-			body {
-				background-color: #000000;
-				margin: 0px;
-				overflow: hidden;
-			}
-		</style>
+    <style type="text/css">
+      body {
+        background-color: #000000;
+        margin: 0px;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
-    <div id="container"></div>
+    <div id="vertexShader">
+      attribute float s_red;
+      attribute float s_blue;
+      attribute float s_green;
+
+      varying float red;
+      varying float blue;
+      varying float green;
+
+     void main() {
+      red = s_red;
+      blue = s_blue;
+      green = s_green;
+      gl_Position =  projectionMatrix *
+                     modelViewMatrix *
+                     vec4(position,1.0);
+     }
+    </div>
+    <div id="fragmentShader">
+      varying float red;
+      varying float blue;
+      varying float green;
+
+      void main() {
+       gl_FragColor = vec4(red,    // R
+                           blue,  // G
+                           green,  // B
+                           1.0); // A
+      }
+    </div>
+
+    <h1 style="color:white; font-size: 50px; font-family:Helvetica; text-align: center; width: 100%">Loading &hellip;</h1>
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
     <script src='vendor/underscore-min.js'></script>
     <script src="vendor/stats.min.js"></script>

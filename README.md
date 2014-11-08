@@ -1,3 +1,9 @@
-constellation-deformation
+# Constellation Deformation
 =========================
-animate star trajectories over long periods to simulate constellation deformation
+Animate star trajectories over long periods to simulate
+constellation deformation.
+
+## Demos
+
+Web: https://spacetimeapp.herokuapp.com/
+

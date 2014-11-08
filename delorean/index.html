@@ -2,19 +2,51 @@
 <html>
   <head>
   		<style type="text/css">
+      /*@import url(vendor/rangeslider.css);*/
 			body {
-				background-color: #000000;
+				background-color: #111;
 				margin: 0px;
 				overflow: hidden;
+        color:#fff;
 			}
+      .ui-slider-horizontal .ui-state-default {background: white url(img/delorian.png) no-repeat scroll 50% 50%;}
+      .slider_dude {
+        width:100%;
+      }
 		</style>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    
+    <link type="text/css" href="http://jqueryui.com/latest/themes/base/ui.all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+
+
   </head>
   <body>
+    <script type="text/javascript">
+         $(document).ready(function(){
+        $("#time_slider").slider();
+    });
+
+    </script>
     <div id="container"></div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+    <div id='time_slider' class='slider_dude'></div>
+    
+    <!-- <input type="range" id='time_slider' class='slider_dude' value='0' min="-9" max="9" data-rangeslider> -->
+    
     <script src='vendor/underscore-min.js'></script>
     <script src="vendor/stats.min.js"></script>
     <script src="vendor/three.min.js"></script>
+    
+    
     <script src="app.js"></script>
+    
+    <script type="text/javascript">    
+      
+    </script>
+    
+
   </body>
 </html>

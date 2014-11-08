@@ -1,52 +1,157 @@
 <!doctype html>
 <html>
   <head>
+  <title>SPACE TIME</title>
+    <link href='//fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
+
       body {
+        font-family: 'Inconsolata', Arial;
+        color:#fff;
         background-color: #000000;
         margin: 0px;
         overflow: hidden;
       }
+      .hide {
+        display: none;
+      }
+
+      .slider_dude {
+        cursor:pointer;
+        position: absolute;
+        bottom: 10px;
+        width:100%;
+      }
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 2px;
+    background: #ddd;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 40px;
+    width: 100px;
+    background-image: url('img/delorean.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -37px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+      #output {
+        position: absolute;
+        bottom:30px;
+        width:100%;
+      }
+      h1 {
+        color:#fff;
+        text-align:center;
+        font-size: 3em;
+      }
+      .header {
+        width: 100%;
+        position: absolute;
+        top:5px;
+        color:#fff;
+        text-align:center;
+        font-size: 4em;
+      }
+
+      @media (max-width: 960px){
+        .slider_dude {
+          bottom:30px;
+          margin-left:10px;
+          margin-right:10px;
+
+        }
+        input[type=range]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          border: none;
+          height: 80px;
+          width: 150px;
+          margin-top: -71px;
+
+        }
+        #output {
+          bottom:80px;  
+        }
+        
+    }
+
+
     </style>
   </head>
   <body>
-    <div id="vertexShader">
+    
+    <div id="vertexShader" class="hide">
       attribute float s_red;
       attribute float s_blue;
       attribute float s_green;
+      attribute float s_opacity;
 
       varying float red;
       varying float blue;
       varying float green;
+      varying float opacity;
 
      void main() {
       red = s_red;
       blue = s_blue;
       green = s_green;
+      opacity = s_opacity;
       gl_Position =  projectionMatrix *
                      modelViewMatrix *
                      vec4(position,1.0);
+      gl_PointSize = 2.0;
      }
     </div>
-    <div id="fragmentShader">
+    <div id="fragmentShader" class="hide">
       varying float red;
       varying float blue;
       varying float green;
-
+      varying float opacity;
+      
       void main() {
        gl_FragColor = vec4(red,    // R
                            blue,  // G
                            green,  // B
-                           1.0); // A
+                           opacity); // A
+
       }
     </div>
 
+  
     <h1 style="color:white; font-size: 50px; font-family:Helvetica; text-align: center; width: 100%">Loading &hellip;</h1>
-
+    <h2 class='header'>SPACE TIME</h2>
+    <input type='range' id='time_slider' class='slider_dude' value='0' max='650' min='-650'></input>
+    
+    <div id='output'></div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
     <script src='vendor/underscore-min.js'></script>
     <script src="vendor/stats.min.js"></script>
     <script src="vendor/three.min.js"></script>
+    
+    
     <script src="app.js"></script>
+    
+    <script type="text/javascript">
+    </script>
+
+    
+
   </body>
 </html>

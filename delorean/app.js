@@ -1,24 +1,4 @@
-var ExampleApplication = React.createClass({
-  render: function() {
-    var elapsed = Math.round(this.props.elapsed  / 100);
-    var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
-    var message =
-      'React has been successfully running for ' + seconds + ' seconds.';
-
-    return <p>{message}</p>;
-  }
-});
-
 var camera, scene, renderer, group, particle;
-
-var start = new Date().getTime();
-
-setInterval(function() {
-  React.render(
-    <ExampleApplication elapsed={new Date().getTime() - start} />,
-    document.getElementById('container')
-  );
-}, 50);
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -26,7 +6,14 @@ var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHe
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
-
+console.log('cats');
+$.getJSON('data/stars.json', function(stars) {
+  debugger;
+  console.log('star');
+})
+.fail(function(data) {
+  console.log(stars);
+  var stars = JSON.parse(data.responseText);
 // create the particle variables
 var particleCount = stars.length,
     particles = new THREE.Geometry(),
@@ -42,24 +29,25 @@ var time = 0; //THE UNITS ARE MEGAYEARS.
 // now create the individual particles
 for (var p = 0; p < particleCount; p++) {
   var star = stars[p];
+  console.log('star');
   var coords = star['pos'];
   var velocities = star['speed'];
 
   var pX = coords[0] + (time * velocities[0]),
       pY = coords[1] + (time * velocities[1]),
       pZ = coords[2] + (time * velocities[2]),
-  
+
       particle = new THREE.Particle(
         new THREE.Vector3(pX, pY, pZ)
       );
 
-  var distance = Math.sqrt(Math.pow(pX,2) + Math.pow(pY,2) + Math.pow(pZ,2))
+  var distance = Math.sqrt(Math.pow(pX,2) + Math.pow(pY,2) + Math.pow(pZ,2));
   var flux = star.lum / (4*3.14 (Math.pow(distance,2)));
-  
+
   particles.vertices.push(particle);
 }
 
-scene.add(particles);
+//scene.add(particles);
 
 // create the particle system
 var particleSystem = new THREE.PointCloud(
@@ -74,10 +62,10 @@ var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 
 // add it to the scene
 scene.add(particleSystem);
-scene.add(particles)
+//scene.add(particles)
 function render() { 
   requestAnimationFrame( render );
   renderer.render( scene, camera );
 }
 render();
-
+})

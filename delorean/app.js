@@ -1,5 +1,5 @@
-var container, stats;
-var camera, scene, renderer, geometry, materials = [], parameters, i, h, color, size;
+var container;
+var camera, scene, renderer, geometry, parameters, h, color, size;
 var mouseX = 0, mouseY = 0;
 
 var windowHalfX = window.innerWidth / 2;
@@ -83,11 +83,6 @@ function init() {
   renderer.setSize( window.innerWidth, window.innerHeight );
   container.appendChild( renderer.domElement );
 
-  stats = new Stats();
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.bottom = '0px';
-  container.appendChild( stats.domElement );
-
   // document.addEventListener( 'mousemove', onDocumentMouseMove, false );
   // document.addEventListener( 'touchstart', onDocumentTouchStart, false );
   // document.addEventListener( 'touchmove', onDocumentTouchMove, false );
@@ -168,7 +163,7 @@ function timeToYear(time) {
 
 function animate() {
   var value = document.getElementById("time_slider").value
-  
+
   // console.log(value)
   time = scale_time(value)
   $('#output').html('<h1>' + timeToYear(time) + '</h1>')
@@ -176,8 +171,7 @@ function animate() {
 
   frames = frames + 1;
   render();
-  stats.update();
-  
+
   if(scene.children[0]) {
   //   time = time + 0.0000001; //each frame increment a year.
     updateVertices(scene.children[0].geometry);

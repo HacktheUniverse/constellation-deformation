@@ -15,7 +15,7 @@ function init() {
   document.body.appendChild( container );
 
   camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 3000 );
-  camera.position.z = 1000;
+  //camera.position.z = 1000;
   scene = new THREE.Scene();
   geometry = new THREE.Geometry();
   $.getJSON('data/stars.json', function(stars) {
@@ -24,11 +24,11 @@ function init() {
     for (var i = 0; i < stars.length; i ++ ) {
       var star = stars[i];
       var coords = star.pos;
-      var velocities = star.speed;
       var vertex = new THREE.Vector3();
-      vertex.x = coords[0] + (time * velocities[0]);
-      vertex.y = coords[1] + (time * velocities[1]);
-      vertex.z = coords[2] + (time * velocities[2]);;
+      vertex.x = coords[0];
+      vertex.y = coords[1];
+      vertex.z = coords[2];
+      vertex.velocities = star.speed;
 
       geometry.vertices.push( vertex );
     }
@@ -51,21 +51,37 @@ function init() {
   // document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 
   //  window.addEventListener( 'resize', onWindowResize, false );
-
 }
 
+function updateVertices(geometry) {
+  geometry.vertices.forEach(function(v) {
+    v.x += (time * v.velocities[0]);
+    v.y += (time * v.velocities[1]);
+    v.z += (time * v.velocities[2]);
+  });
+
+  geometry.verticesNeedUpdate = true;
+}
+
+var frames  = 0;
 function animate() {
 
   requestAnimationFrame( animate );
 
+  frames = frames + 1;
+  console.log(time);
   render();
   stats.update();
-
+  if(scene.children[0] && (frames % 10 == 0)) {
+    time = time + 0.01;
+    updateVertices(scene.children[0].geometry);
+  }
 }
 
 function render() {
 
   // var time = Date.now() * 0.00005;
+  camera.position.z = 100;
 
   // camera.position.x += ( mouseX - camera.position.x ) * 0.05;
   // camera.position.y += ( - mouseY - camera.position.y ) * 0.05;

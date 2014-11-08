@@ -148,8 +148,8 @@ function scale_time(value) {
 }
 
 function timeToYear(time) {
-  var currentYear = 2014
-  var output_year = currentYear + (time *1000000)
+  var currentYear = 2014;
+  var output_year = currentYear + (time * 1000000)
   output_year = Math.round(output_year);
   if (output_year < 0) {
     output_year = Math.abs(output_year) + ' BCE'

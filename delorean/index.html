@@ -29,14 +29,23 @@
         width:100%;
       }
       h1 {
+        color:#fff;
         text-align:center;
         font-size: 3em;
+      }
+      .header {
+        width: 100%;
+        position: absolute;
+        top:5px;
+        color:#fff;
+        text-align:center;
+        font-size: 4em;
       }
 
     </style>
   </head>
   <body>
-
+    
     <div id="vertexShader" class="hide">
       attribute float s_red;
       attribute float s_blue;
@@ -73,9 +82,9 @@
       }
     </div>
 
-
+  
     <h1 style="color:white; font-size: 50px; font-family:Helvetica; text-align: center; width: 100%">Loading &hellip;</h1>
-
+    <h2 class='header'>SPACE TIME</h2>
     <input type='range' id='time_slider' class='slider_dude' value='0' max='650' min='-650'></input>
     
     <div id='output'></div>

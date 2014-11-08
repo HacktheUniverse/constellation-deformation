@@ -3,6 +3,8 @@
 Animate star trajectories over long periods to simulate
 constellation deformation.
 
+Challenge: Visualization
+
 ## Demos
 
 Web: https://spacetimeapp.herokuapp.com/

@@ -131,13 +131,14 @@ function scale_time(value) {
   //3 
 
   var value = value/10.0;
-  var is_negative = time < 0;
+
+  var is_negative = value < 0;
 
 
   var one_year = Math.pow(10, -6);
   var log_input = Math.pow(10, Math.abs(value));
 
-  if (is_negative)  { console.log('NEGATIVE NEGATIVE'); log_input * -1;}
+  if (is_negative)  { console.log('NEGATIVE NEGATIVE'); log_input = log_input * -1;}
   return one_year * log_input;
 }
 

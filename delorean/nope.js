@@ -17,6 +17,7 @@ function init() {
   camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 3000 );
   //camera.position.z = 1000;
   scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x000000, 0.0007);
   geometry = new THREE.Geometry();
   $.getJSON('data/stars.json', function(stars) {
     window.star = stars[1];
@@ -32,7 +33,7 @@ function init() {
 
       geometry.vertices.push( vertex );
     }
-    material = new THREE.PointCloudMaterial( { size: 1 } );
+    material = new THREE.PointCloudMaterial( { size: 3, sizeAttenuation:false } );
     particles = new THREE.PointCloud( geometry, material );
     scene.add( particles );
   });
@@ -69,7 +70,6 @@ function animate() {
   requestAnimationFrame( animate );
 
   frames = frames + 1;
-  console.log(time);
   render();
   stats.update();
   if(scene.children[0] && (frames % 10 == 0)) {
@@ -81,7 +81,6 @@ function animate() {
 function render() {
 
   // var time = Date.now() * 0.00005;
-  camera.position.z = 100;
 
   // camera.position.x += ( mouseX - camera.position.x ) * 0.05;
   // camera.position.y += ( - mouseY - camera.position.y ) * 0.05;

@@ -119,27 +119,6 @@ function updateVertices(geometry) {
 
 var frames  = 0;
 
-  
-$('input[type="range"]').rangeslider({
-
-      // Feature detection the default is `true`.
-      // Set this to `false` if you want to use
-      // the polyfill also in Browsers which support
-      // the native <input type="range"> element.
-      polyfill: true,
-
-      // Default CSS classes
-      rangeClass: 'rangeslider',
-      fillClass: 'rangeslider__fill',
-      handleClass: 'rangeslider__handle',
-
-      // Callback function
-
-      // Callback function
-      onSlide: animate
-
-      
-  });
 
 function getBaseLog(x, y) {
     return Math.log(y) / Math.log(x);
@@ -150,6 +129,7 @@ function scale_time(value) {
   //if 1 return 10E-6
   //2 return 10E-5
   //3 
+  var value = value/10.0;
   var is_negative = time < 0;
 
   var one_year = Math.pow(10, -6);
@@ -171,7 +151,7 @@ function animate() {
   render();
   stats.update();
   
-  if(scene.children[0] && (frames % 10 == 0)) {
+  if(scene.children[0]) {
   //   time = time + 0.0000001; //each frame increment a year.
     updateVertices(scene.children[0].geometry);
   }

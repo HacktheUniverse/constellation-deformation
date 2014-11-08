@@ -10,9 +10,9 @@
       .hide {
         display: none;
       }
-      .ui-slider-horizontal .ui-state-default {background: white url(img/delorian.png) no-repeat scroll 50% 50%;}
       
       .slider_dude {
+        background: white url(img/delorian.png) no-repeat scroll 50% 50%;
         width:100%;
       }
 
@@ -55,7 +55,8 @@
 
     <h1 style="color:white; font-size: 50px; font-family:Helvetica; text-align: center; width: 100%">Loading &hellip;</h1>
 
-    <div id='time_slider' class='slider_dude'></div>
+    <input type='range' id='time_slider' class='slider_dude' value='0' max='90' min='-90'></input>
+    
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
     <script src='vendor/underscore-min.js'></script>
@@ -66,9 +67,6 @@
     <script src="app.js"></script>
     
     <script type="text/javascript">
-         $(document).ready(function(){
-        $("#time_slider").slider();
-    });
     </script>
 
     

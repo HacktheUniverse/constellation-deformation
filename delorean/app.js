@@ -35,6 +35,7 @@ function init() {
     };
 
     var material = new THREE.ShaderMaterial( {
+      transparent: true,
       attributes: attributes,
       vertexShader: document.getElementById( 'vertexShader' ).textContent,
       fragmentShader: document.getElementById( 'fragmentShader' ).textContent
@@ -62,14 +63,15 @@ function init() {
       var distance = Math.sqrt(Math.pow(vertex.x,2) + Math.pow(vertex.y,2) + Math.pow(vertex.z,2));
       
       var flux = star.lum / (4 * 3.14 * (Math.pow(distance,2)));
-      console.log(flux)
-      var star_opacity = flux;
+      
+      var star_opacity = flux * 1000;
 
       geometry.vertices.push( vertex );
       reds.push(color[0] / 255);
       greens.push(color[1] / 255 );
       blues.push(color[2] / 255);
       opacities.push(star_opacity);
+      
     }
     // var material = new THREE.PointCloudMaterial({ size: 3, sizeAttenuation:false });
 
@@ -157,7 +159,6 @@ function timeToYear(time) {
   else {
     output_year = output_year + ' CE'
   }
-
   return output_year
 }
 
@@ -175,6 +176,7 @@ function animate() {
   if(scene.children[0]) {
   //   time = time + 0.0000001; //each frame increment a year.
     updateVertices(scene.children[0].geometry);
+
   }
 }
 

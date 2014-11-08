@@ -26,6 +26,7 @@
 
 #define CAP @"Incos_Cap_"
 #define LOW @"Incos_lower_"
+#define NUM @"Incos_num_"
 
 -(id) init{
     self = [super init];
@@ -83,16 +84,16 @@
                     [self loadTexture:[LOW stringByAppendingString:@"x.png"]], @"x",
                     [self loadTexture:[LOW stringByAppendingString:@"y.png"]], @"y",
                     [self loadTexture:[LOW stringByAppendingString:@"z.png"]], @"z",
-//                    [self loadTexture:@"0.png"], @"0",
-//                    [self loadTexture:@"1.png"], @"1",
-//                    [self loadTexture:@"2.png"], @"2",
-//                    [self loadTexture:@"3.png"], @"3",
-//                    [self loadTexture:@"4.png"], @"4",
-//                    [self loadTexture:@"5.png"], @"5",
-//                    [self loadTexture:@"6.png"], @"6",
-//                    [self loadTexture:@"7.png"], @"7",
-//                    [self loadTexture:@"8.png"], @"8",
-//                    [self loadTexture:@"9.png"], @"9",
+                    [self loadTexture:[NUM stringByAppendingString:@"0.png"]], @"0",
+                    [self loadTexture:[NUM stringByAppendingString:@"1.png"]], @"1",
+                    [self loadTexture:[NUM stringByAppendingString:@"2.png"]], @"2",
+                    [self loadTexture:[NUM stringByAppendingString:@"3.png"]], @"3",
+                    [self loadTexture:[NUM stringByAppendingString:@"4.png"]], @"4",
+                    [self loadTexture:[NUM stringByAppendingString:@"5.png"]], @"5",
+                    [self loadTexture:[NUM stringByAppendingString:@"6.png"]], @"6",
+                    [self loadTexture:[NUM stringByAppendingString:@"7.png"]], @"7",
+                    [self loadTexture:[NUM stringByAppendingString:@"8.png"]], @"8",
+                    [self loadTexture:[NUM stringByAppendingString:@"9.png"]], @"9",
                     [self loadTexture:@"Incos_space.png"], @" ",nil];
     }
     return self;

@@ -299,7 +299,7 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
 //    if(_buttonTouched){
     delorean.x = _delorianStartX +  x * .005;
     float millionsOfYears = delorean.x*.2;
-    NSLog(@"%f+.02014",millionsOfYears);
+//    NSLog(@"%f+.02014",millionsOfYears);
     [self updateStars:millionsOfYears*.1];
     if(millionsOfYears+.02014 < 0)
         [year setText:[NSString stringWithFormat:@"%d BCE",(int)(millionsOfYears*100000 + 2014)]];

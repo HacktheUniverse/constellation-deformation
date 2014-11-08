@@ -1,64 +1,149 @@
-var camera, scene, renderer, group, particle;
+var container, stats;
+var camera, scene, renderer, particles, geometry, materials = [], parameters, i, h, color, size;
+var mouseX = 0, mouseY = 0;
 
-var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+var windowHalfX = window.innerWidth / 2;
+var windowHalfY = window.innerHeight / 2;
 
-var renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
-console.log('cats');
-$.getJSON('data/stars.json', function(stars) {
-//.fail(function(data) {
-  console.log(stars);
- // var stars = JSON.parse(data.responseText);
-// create the particle variables
-var particleCount = stars.length,
-    particles = new THREE.Geometry(),
-    pMaterial = new THREE.PointCloudMaterial({
-      color: 0xFFFFFF,
-      size: 20
-    });
+var time = 0; // MEGAYEARS
 
-function write_new_coords(star, date) {
+init();
+animate();
 
+function init() {
+  container = document.createElement( 'div' );
+  document.body.appendChild( container );
+
+  camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 3000 );
+  //camera.position.z = 1000;
+  scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x000000, 0.0007);
+  geometry = new THREE.Geometry();
+  $.getJSON('data/stars.json', function(stars) {
+    window.star = stars[1];
+
+    for (var i = 0; i < stars.length; i ++ ) {
+      var star = stars[i];
+      var coords = star.pos;
+      var vertex = new THREE.Vector3();
+      vertex.x = coords[0];
+      vertex.y = coords[1];
+      vertex.z = coords[2];
+      vertex.velocities = star.speed;
+
+      geometry.vertices.push( vertex );
+    }
+    material = new THREE.PointCloudMaterial( { size: 3, sizeAttenuation:false } );
+    particles = new THREE.PointCloud( geometry, material );
+    scene.add( particles );
+  });
+
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  container.appendChild( renderer.domElement );
+
+  stats = new Stats();
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.top = '0px';
+  container.appendChild( stats.domElement );
+
+  // document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+  // document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+  // document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+
+  //  window.addEventListener( 'resize', onWindowResize, false );
 }
-var time = 0; //THE UNITS ARE MEGAYEARS.
-// now create the individual particles
-for (var p = 0; p < particleCount; p++) {
-  var star = stars[p];
-  console.log(star);
-  var coords = star['pos'];
-  var velocities = star['speed'];
 
-  var pX = coords[0] + (time * velocities[0]),
-      pY = coords[1] + (time * velocities[1]),
-      pZ = coords[2] + (time * velocities[2]),
+function updateVertices(geometry) {
+  geometry.vertices.forEach(function(v) {
+    v.x += (time * v.velocities[0]);
+    v.y += (time * v.velocities[1]);
+    v.z += (time * v.velocities[2]);
+  });
 
-      particle = new THREE.Particle(
-        new THREE.Vector3(pX, pY, pZ)
-      );
-
-  var distance = Math.sqrt(Math.pow(pX,2) + Math.pow(pY,2) + Math.pow(pZ,2));
- // var flux = star.lum / (4*3.14 (Math.pow(distance,2)));
-
-  particles.vertices.push(particle);
+  geometry.verticesNeedUpdate = true;
 }
 
-//scene.add(particles);
+var frames  = 0;
+function animate() {
 
-// create the particle system
-var particleSystem = new THREE.PointCloud(
-    particles,
-    pMaterial);
+  requestAnimationFrame( animate );
 
-// camera.position.z = 5;
+  frames = frames + 1;
+  render();
+  stats.update();
+  if(scene.children[0] && (frames % 10 == 0)) {
+    time = time + 0.01;
+    updateVertices(scene.children[0].geometry);
+  }
+}
 
-// add it to the scene
-scene.add(particleSystem);
-//scene.add(particles)
 function render() {
-  requestAnimationFrame( render );
-  renderer.render( scene, camera );
+
+  // var time = Date.now() * 0.00005;
+
+  // camera.position.x += ( mouseX - camera.position.x ) * 0.05;
+  // camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
+
+  // camera.lookAt( scene.position );
+
+  // for ( i = 0; i < scene.children.length; i ++ ) {
+
+  //   var object = scene.children[ i ];
+
+  //   if ( object instanceof THREE.PointCloud ) {
+
+  //     object.rotation.y = time * ( i < 4 ? i + 1 : - ( i + 1 ) );
+
+  //   }
+
+  // }
+
+  renderer.render(scene, camera);
+
 }
-render();
-});
+
+// function onWindowResize() {
+
+//   windowHalfX = window.innerWidth / 2;
+//   windowHalfY = window.innerHeight / 2;
+
+//   camera.aspect = window.innerWidth / window.innerHeight;
+//   camera.updateProjectionMatrix();
+
+//   renderer.setSize( window.innerWidth, window.innerHeight );
+
+// }
+
+// function onDocumentMouseMove( event ) {
+
+//   mouseX = event.clientX - windowHalfX;
+//   mouseY = event.clientY - windowHalfY;
+
+// }
+
+// function onDocumentTouchStart( event ) {
+
+//   if ( event.touches.length === 1 ) {
+
+//     event.preventDefault();
+
+//     mouseX = event.touches[ 0 ].pageX - windowHalfX;
+//     mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+//   }
+
+// }
+
+// function onDocumentTouchMove( event ) {
+
+//   if ( event.touches.length === 1 ) {
+
+//     event.preventDefault();
+
+//     mouseX = event.touches[ 0 ].pageX - windowHalfX;
+//     mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+//   }
+
+// }

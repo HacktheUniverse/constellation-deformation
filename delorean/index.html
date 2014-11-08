@@ -1,8 +1,12 @@
 <!doctype html>
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
     <style type="text/css">
+
       body {
+        font-family: 'Inconsolata';
+        color:#fff;
         background-color: #000000;
         margin: 0px;
         overflow: hidden;
@@ -14,6 +18,14 @@
       .slider_dude {
         background: white url(img/delorian.png) no-repeat scroll 50% 50%;
         width:100%;
+      }
+
+      #output {
+        width:100%;
+      }
+      h1 {
+        text-align:center;
+        font-size: 3em;
       }
 
     </style>
@@ -55,7 +67,7 @@
 
     <h1 style="color:white; font-size: 50px; font-family:Helvetica; text-align: center; width: 100%">Loading &hellip;</h1>
 
-    <input type='range' id='time_slider' class='slider_dude' value='0' max='90' min='-90'></input>
+    <input type='range' id='time_slider' class='slider_dude' value='0' max='650' min='-650'></input>
     
     <div id='output'></div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>

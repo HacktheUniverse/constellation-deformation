@@ -130,7 +130,7 @@ function scale_time(value) {
   //2 return 10E-5
   //3 
 
-  var value = value/10.0;
+  var value = value/100.0;
 
   var is_negative = value < 0;
 
@@ -147,7 +147,7 @@ function timeToYear(time) {
   var output_year = currentYear + (time *1000000)
   output_year = Math.round(output_year);
   if (output_year < 0) {
-    output_year = output_year + ' BCE'
+    output_year = Math.abs(output_year) + ' BCE'
   }
   else {
     output_year = output_year + ' CE'

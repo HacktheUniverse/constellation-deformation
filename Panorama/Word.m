@@ -107,6 +107,8 @@
         if ([validCharacters rangeOfString:letter].location != NSNotFound)
             [textureArray addObject:[fontBank objectForKey:letter]];
     }
+    _width = text.length*2.5;
+    if(_width != 0) _width -= 1.25;
     textures = textureArray;
     _text = text;
 }

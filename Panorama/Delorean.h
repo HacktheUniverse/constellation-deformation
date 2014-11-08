@@ -8,12 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Word : NSObject
+@interface Delorean : NSObject
 
-@property (nonatomic, strong) NSString *text;
-@property NSInteger width;
+@property float x;
 
--(id)initWithString:(NSString*)string;
 -(void)execute;
 
 @end

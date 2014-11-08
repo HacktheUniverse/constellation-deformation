@@ -94,6 +94,8 @@
 		D5D7C0161A0E9207003B4987 /* Incos_num_7.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D7C00C1A0E9207003B4987 /* Incos_num_7.png */; };
 		D5D7C0171A0E9207003B4987 /* Incos_num_8.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D7C00D1A0E9207003B4987 /* Incos_num_8.png */; };
 		D5D7C0181A0E9207003B4987 /* Incos_num_9.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D7C00E1A0E9207003B4987 /* Incos_num_9.png */; };
+		D5D7C01A1A0E998E003B4987 /* delorean.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D7C0191A0E998E003B4987 /* delorean.png */; };
+		D5D7C01D1A0E9A24003B4987 /* Delorean.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D7C01C1A0E9A24003B4987 /* Delorean.m */; };
 		D5FAE07917C8956600AE6EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FAE07817C8956600AE6EC9 /* Foundation.framework */; };
 		D5FAE09B17C8956600AE6EC9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FAE09A17C8956600AE6EC9 /* XCTest.framework */; };
 		D5FAE09C17C8956600AE6EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FAE07817C8956600AE6EC9 /* Foundation.framework */; };
@@ -210,6 +212,9 @@
 		D5D7C00C1A0E9207003B4987 /* Incos_num_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Incos_num_7.png; sourceTree = "<group>"; };
 		D5D7C00D1A0E9207003B4987 /* Incos_num_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Incos_num_8.png; sourceTree = "<group>"; };
 		D5D7C00E1A0E9207003B4987 /* Incos_num_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Incos_num_9.png; sourceTree = "<group>"; };
+		D5D7C0191A0E998E003B4987 /* delorean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delorean.png; sourceTree = "<group>"; };
+		D5D7C01B1A0E9A1E003B4987 /* Delorean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delorean.h; sourceTree = "<group>"; };
+		D5D7C01C1A0E9A24003B4987 /* Delorean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Delorean.m; sourceTree = "<group>"; };
 		D5FAE07517C8956600AE6EC9 /* Constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FAE07817C8956600AE6EC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D5FAE07A17C8956600AE6EC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -258,8 +263,11 @@
 				D571EAA71A0DD3EB0085052A /* visible_stars_hacky.csv */,
 				D55E8FA81828D2360076A9D7 /* PanoramaView.h */,
 				D55E8FA91828D2360076A9D7 /* PanoramaView.m */,
+				D5D7C01B1A0E9A1E003B4987 /* Delorean.h */,
+				D5D7C01C1A0E9A24003B4987 /* Delorean.m */,
 				D5D7BF2E1A0E7D57003B4987 /* Word.h */,
 				D5D7BF2F1A0E7D57003B4987 /* Word.m */,
+				D5D7C0191A0E998E003B4987 /* delorean.png */,
 				D5D7BF9A1A0E851C003B4987 /* letters */,
 				D5D7BF221A0E1C51003B4987 /* third party */,
 				D55E8FD11828D3400076A9D7 /* images */,
@@ -530,6 +538,7 @@
 				D55E8FDE1828D3F50076A9D7 /* 120.png in Resources */,
 				D571EAA61A0DC2680085052A /* tycho_cyl_glow.png in Resources */,
 				D5D7BFF01A0E851C003B4987 /* Incos_lower_g.png in Resources */,
+				D5D7C01A1A0E998E003B4987 /* delorean.png in Resources */,
 				D5D7BFDE1A0E851C003B4987 /* Incos_Cap_o.png in Resources */,
 				D5D7BFFA1A0E851C003B4987 /* Incos_lower_q.png in Resources */,
 				D5D7BFFE1A0E851C003B4987 /* Incos_lower_u.png in Resources */,
@@ -603,6 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D55E8FB21828D2360076A9D7 /* AppDelegate.m in Sources */,
+				D5D7C01D1A0E9A24003B4987 /* Delorean.m in Sources */,
 				D55E8FC61828D2360076A9D7 /* ViewController.m in Sources */,
 				D55E8FC11828D2360076A9D7 /* PanoramaView.m in Sources */,
 				D571EAAD1A0DDAE80085052A /* CHCSVParser.m in Sources */,

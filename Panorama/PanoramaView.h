@@ -11,6 +11,7 @@
  */
 @interface PanoramaView : GLKView
 
+-(void) updateOrientation;
 
 -(id) init;  // recommended init method
 
@@ -63,6 +64,8 @@
 
 
 /*  projection & touches  */
+
+@property GLKMatrix4 attitudeMatrix;
 
 
 @property (nonatomic, readonly) NSSet *touches;

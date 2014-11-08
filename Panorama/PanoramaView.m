@@ -15,7 +15,7 @@
 #define FOV_MIN 1
 #define FOV_MAX 155
 #define Z_NEAR 0.1f
-#define Z_FAR 100.0f
+#define Z_FAR 10000.0f
 
 // LINEAR for smoothing, NEAREST for pixelized
 #define IMAGE_SCALING GL_LINEAR  // GL_NEAREST, GL_LINEAR
@@ -45,7 +45,7 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     CMMotionManager *motionManager;
     UIPinchGestureRecognizer *pinchGesture;
     UIPanGestureRecognizer *panGesture;
-    GLKMatrix4 _projectionMatrix, _attitudeMatrix, _offsetMatrix;
+    GLKMatrix4 _projectionMatrix, _offsetMatrix;
     float _aspectRatio;
     GLfloat circlePoints[64*3];  // meridian lines
 }
@@ -151,42 +151,32 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
+-(void) updateOrientation{
+    _attitudeMatrix = GLKMatrix4Multiply([self getDeviceOrientationMatrix], _offsetMatrix);
+    [self updateLook];
+}
 -(void)draw{
     static GLfloat whiteColor[] = {1.0f, 1.0f, 1.0f, 1.0f};
     static GLfloat clearColor[] = {0.0f, 0.0f, 0.0f, 0.0f};
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-    glPushMatrix(); // begin device orientation
-
-        _attitudeMatrix = GLKMatrix4Multiply([self getDeviceOrientationMatrix], _offsetMatrix);
-        [self updateLook];
     
-        glMultMatrixf(_attitudeMatrix.m);
-    
-        glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, whiteColor);  // panorama at full color
-        [sphere execute];
-        glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, clearColor);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, whiteColor);  // panorama at full color
+    [sphere execute];
+    glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, clearColor);
 //        [meridians execute];  // semi-transparent texture overlay (15° meridian lines)
-
-//TODO: add any objects here to make them a part of the virtual reality
-//        glPushMatrix();
-//        // object code
-//        glPopMatrix();
     
         // touch lines
-        if(_showTouches && _numberOfTouches){
-            glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
-            for(int i = 0; i < [[_touches allObjects] count]; i++){
-                glPushMatrix();
-                    CGPoint touchPoint = CGPointMake([(UITouch*)[[_touches allObjects] objectAtIndex:i] locationInView:self].x,
+    if(_showTouches && _numberOfTouches){
+        glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
+        for(int i = 0; i < [[_touches allObjects] count]; i++){
+            glPushMatrix();
+                CGPoint touchPoint = CGPointMake([(UITouch*)[[_touches allObjects] objectAtIndex:i] locationInView:self].x,
                                                      [(UITouch*)[[_touches allObjects] objectAtIndex:i] locationInView:self].y);
-                    [self drawHotspotLines:[self vectorFromScreenLocation:touchPoint inAttitude:_attitudeMatrix]];
-                glPopMatrix();
-            }
-            glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+            [self drawHotspotLines:[self vectorFromScreenLocation:touchPoint inAttitude:_attitudeMatrix]];
+            glPopMatrix();
         }
+        glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+    }
     
-    glPopMatrix(); // end device orientation
 }
 #pragma mark- ORIENTATION
 -(GLKMatrix4) getDeviceOrientationMatrix{

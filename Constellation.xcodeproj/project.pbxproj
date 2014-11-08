@@ -25,6 +25,8 @@
 		D55E8FE51828D3F50076A9D7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D55E8FDC1828D3F50076A9D7 /* icon.png */; };
 		D571EAA51A0DC2680085052A /* Tycho_2048_city.png in Resources */ = {isa = PBXBuildFile; fileRef = D571EAA31A0DC2680085052A /* Tycho_2048_city.png */; };
 		D571EAA61A0DC2680085052A /* tycho_cyl_glow.png in Resources */ = {isa = PBXBuildFile; fileRef = D571EAA41A0DC2680085052A /* tycho_cyl_glow.png */; };
+		D571EAA81A0DD3EB0085052A /* visible_stars_hacky.csv in Resources */ = {isa = PBXBuildFile; fileRef = D571EAA71A0DD3EB0085052A /* visible_stars_hacky.csv */; };
+		D571EAAD1A0DDAE80085052A /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D571EAAC1A0DDAE80085052A /* CHCSVParser.m */; };
 		D5C8B44C18A8E58700051A88 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C8B44B18A8E58700051A88 /* Default-568h@2x.png */; };
 		D5FAE07917C8956600AE6EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FAE07817C8956600AE6EC9 /* Foundation.framework */; };
 		D5FAE09B17C8956600AE6EC9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FAE09A17C8956600AE6EC9 /* XCTest.framework */; };
@@ -71,6 +73,9 @@
 		D55E8FDC1828D3F50076A9D7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		D571EAA31A0DC2680085052A /* Tycho_2048_city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tycho_2048_city.png; sourceTree = "<group>"; };
 		D571EAA41A0DC2680085052A /* tycho_cyl_glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tycho_cyl_glow.png; sourceTree = "<group>"; };
+		D571EAA71A0DD3EB0085052A /* visible_stars_hacky.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = visible_stars_hacky.csv; path = data/visible_stars_hacky.csv; sourceTree = SOURCE_ROOT; };
+		D571EAAB1A0DDAE80085052A /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		D571EAAC1A0DDAE80085052A /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		D5C8B44B18A8E58700051A88 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D5FAE07517C8956600AE6EC9 /* Constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FAE07817C8956600AE6EC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,8 +120,11 @@
 				D55E8F951828D2360076A9D7 /* AppDelegate.m */,
 				D55E8FB01828D2360076A9D7 /* ViewController.h */,
 				D55E8FB11828D2360076A9D7 /* ViewController.m */,
+				D571EAA71A0DD3EB0085052A /* visible_stars_hacky.csv */,
 				D55E8FA81828D2360076A9D7 /* PanoramaView.h */,
 				D55E8FA91828D2360076A9D7 /* PanoramaView.m */,
+				D571EAAB1A0DDAE80085052A /* CHCSVParser.h */,
+				D571EAAC1A0DDAE80085052A /* CHCSVParser.m */,
 				D55E8FD11828D3400076A9D7 /* images */,
 				D55E8FD21828D3790076A9D7 /* Supporting Files */,
 			);
@@ -291,6 +299,7 @@
 				D55E8FE11828D3F50076A9D7 /* 57.png in Resources */,
 				D55E8FE51828D3F50076A9D7 /* icon.png in Resources */,
 				D571EAA51A0DC2680085052A /* Tycho_2048_city.png in Resources */,
+				D571EAA81A0DD3EB0085052A /* visible_stars_hacky.csv in Resources */,
 				D5C8B44C18A8E58700051A88 /* Default-568h@2x.png in Resources */,
 				D55E8FE21828D3F50076A9D7 /* 60.png in Resources */,
 				D55E8FB61828D2360076A9D7 /* equirectangular-projection-lines.png in Resources */,
@@ -315,6 +324,7 @@
 				D55E8FB21828D2360076A9D7 /* AppDelegate.m in Sources */,
 				D55E8FC61828D2360076A9D7 /* ViewController.m in Sources */,
 				D55E8FC11828D2360076A9D7 /* PanoramaView.m in Sources */,
+				D571EAAD1A0DDAE80085052A /* CHCSVParser.m in Sources */,
 				D55E8FC01828D2360076A9D7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

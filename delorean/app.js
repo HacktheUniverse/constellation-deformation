@@ -16,7 +16,7 @@ var particleCount = stars.length,
     particles = new THREE.Geometry(),
     pMaterial = new THREE.PointCloudMaterial({
       color: 0xFFFFFF,
-      size: 20000
+      size: 20
     });
 
 function write_new_coords(star, date) {
@@ -26,6 +26,7 @@ var time = 0; //THE UNITS ARE MEGAYEARS.
 // now create the individual particles
 for (var p = 0; p < particleCount; p++) {
   var star = stars[p];
+  console.log(star);
   var coords = star['pos'];
   var velocities = star['speed'];
 
@@ -50,16 +51,12 @@ var particleSystem = new THREE.PointCloud(
     particles,
     pMaterial);
 
-var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-
-var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-
 // camera.position.z = 5;
 
 // add it to the scene
 scene.add(particleSystem);
 //scene.add(particles)
-function render() { 
+function render() {
   requestAnimationFrame( render );
   renderer.render( scene, camera );
 }

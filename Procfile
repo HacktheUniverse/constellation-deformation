@@ -1,1 +1,1 @@
-web: node delorean/server.js
+web: node server.js

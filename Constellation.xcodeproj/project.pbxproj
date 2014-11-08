@@ -29,6 +29,7 @@
 		D571EAAD1A0DDAE80085052A /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D571EAAC1A0DDAE80085052A /* CHCSVParser.m */; };
 		D571EAAF1A0DE3990085052A /* visible_stars.csv in Resources */ = {isa = PBXBuildFile; fileRef = D571EAAE1A0DE3980085052A /* visible_stars.csv */; };
 		D5C8B44C18A8E58700051A88 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C8B44B18A8E58700051A88 /* Default-568h@2x.png */; };
+		D5D7BF211A0E1926003B4987 /* constellations.json in Resources */ = {isa = PBXBuildFile; fileRef = D5D7BF201A0E1926003B4987 /* constellations.json */; };
 		D5FAE07917C8956600AE6EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FAE07817C8956600AE6EC9 /* Foundation.framework */; };
 		D5FAE09B17C8956600AE6EC9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FAE09A17C8956600AE6EC9 /* XCTest.framework */; };
 		D5FAE09C17C8956600AE6EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FAE07817C8956600AE6EC9 /* Foundation.framework */; };
@@ -79,6 +80,7 @@
 		D571EAAC1A0DDAE80085052A /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		D571EAAE1A0DE3980085052A /* visible_stars.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = visible_stars.csv; path = data/visible_stars.csv; sourceTree = SOURCE_ROOT; };
 		D5C8B44B18A8E58700051A88 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D5D7BF201A0E1926003B4987 /* constellations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = constellations.json; path = data/constellations.json; sourceTree = SOURCE_ROOT; };
 		D5FAE07517C8956600AE6EC9 /* Constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FAE07817C8956600AE6EC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D5FAE07A17C8956600AE6EC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,12 +124,12 @@
 				D55E8F951828D2360076A9D7 /* AppDelegate.m */,
 				D55E8FB01828D2360076A9D7 /* ViewController.h */,
 				D55E8FB11828D2360076A9D7 /* ViewController.m */,
+				D5D7BF201A0E1926003B4987 /* constellations.json */,
 				D571EAAE1A0DE3980085052A /* visible_stars.csv */,
 				D571EAA71A0DD3EB0085052A /* visible_stars_hacky.csv */,
 				D55E8FA81828D2360076A9D7 /* PanoramaView.h */,
 				D55E8FA91828D2360076A9D7 /* PanoramaView.m */,
-				D571EAAB1A0DDAE80085052A /* CHCSVParser.h */,
-				D571EAAC1A0DDAE80085052A /* CHCSVParser.m */,
+				D5D7BF221A0E1C51003B4987 /* third party */,
 				D55E8FD11828D3400076A9D7 /* images */,
 				D55E8FD21828D3790076A9D7 /* Supporting Files */,
 			);
@@ -181,6 +183,15 @@
 				D55E8FDC1828D3F50076A9D7 /* icon.png */,
 			);
 			path = icons;
+			sourceTree = "<group>";
+		};
+		D5D7BF221A0E1C51003B4987 /* third party */ = {
+			isa = PBXGroup;
+			children = (
+				D571EAAB1A0DDAE80085052A /* CHCSVParser.h */,
+				D571EAAC1A0DDAE80085052A /* CHCSVParser.m */,
+			);
+			name = "third party";
 			sourceTree = "<group>";
 		};
 		D5FAE06C17C8956500AE6EC9 = {
@@ -292,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D7BF211A0E1926003B4987 /* constellations.json in Resources */,
 				D55E8FE31828D3F50076A9D7 /* 72.png in Resources */,
 				D55E8FE41828D3F50076A9D7 /* 76.png in Resources */,
 				D55E8FDD1828D3F50076A9D7 /* 114.png in Resources */,

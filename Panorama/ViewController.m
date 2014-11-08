@@ -39,6 +39,17 @@
     NSMutableArray *array = [NSMutableArray arrayWithContentsOfCSVFile:path];
 
     NSLog(@"%d stars loaded",(int)array.count);
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"constellations" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+
+    NSError* error;
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    
+    NSLog(@"(%@) %@", error, json);
+
+    
+    NSLog(@"constelltions loaded");
 
     numStars = (int)array.count - 1;
     stars = malloc(sizeof(float)*numStars*3);
@@ -80,7 +91,7 @@
 //    for(int i = 0; i < numStars; i++){
 //        NSLog(@"X:%.3f  Y:%.3f  Z:%.3f", stars[i*3+0], stars[i*3+1], stars[i*3+2]);
 //    }
-//    increment = [NSTimer scheduledTimerWithTimeInterval:1.0/30 target:self selector:@selector(incrementStars) userInfo:nil repeats:YES];
+    increment = [NSTimer scheduledTimerWithTimeInterval:1.0/30 target:self selector:@selector(incrementStars) userInfo:nil repeats:YES];
 }
 
 -(void) incrementStars{
@@ -107,8 +118,7 @@
     
     glPointSize(1);
     for(int i = 0; i < numStars; i++){
-//        glPointSize(mag[i]);
-//        float magscale = (mag[i]-1)/4.0;
+        glPointSize( mag[i]*3.0 );
         glColor4f(mag[i], mag[i], mag[i], 1.0f);
         glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, &stars[i]);

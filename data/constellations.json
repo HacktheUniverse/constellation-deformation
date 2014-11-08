@@ -1,0 +1,1555 @@
+ {
+HIP677, Alpha And
+HIP2868, Pi And
+HIP4436, Mu And
+HIP7607, 51 And
+}
+
+# And South Arm
+ mesh -c 1 -s wire {
+HIP677, Alpha And
+HIP3092, Delta And
+HIP5447, Beta And
+HIP9640, Gamma And
+}
+
+# Ant Antlia
+ mesh -c 1 -s wire {
+1 4
+HIP46515, Epsilon Ant
+HIP47758, Theta Ant
+HIP51172, Alpha Ant
+HIP53502, Iota Ant
+}
+
+# Aps Apus
+ mesh -c 1 -s wire {
+
+HIP72370, Alpha Aps
+HIP80057, Delta2 Aps
+HIP81065, Gamma Aps
+HIP81852, Beta Aps
+}
+
+# Aqr Main Branch
+ mesh -c 2 -s wire {
+
+HIP102618, Epsilon Aqr
+HIP106278, Beta Aqr
+HIP109074, Alpha Aqr
+HIP110395, Gamma Aqr
+HIP110960, Zeta Aqr
+HIP111497, Eta Aqr
+HIP114724, Phi Aqr
+HIP112961, Lambda Aqr
+HIP112716, Tau2 Aqr
+HIP113136, Delta Aqr
+HIP114341, 88 Aqr
+}
+
+# Aqr Top of the Jug
+ mesh -c 2 -s wire {
+
+HIP110672, Pi Aqr
+HIP110960, Zeta Aqr
+}
+
+# Aqr Alpha branch
+ mesh -c 2 -s wire {
+
+HIP109074, Alpha Aqr
+HIP110003, Theta Aqr
+HIP109472, e Aqr
+HIP109139, Iota Aqr
+}
+
+# Aql Wings
+ mesh -c 1 -s wire {
+
+HIP93244, Epsilon Aql
+HIP93747, Zeta Aql
+HIP97278, Gamma Aql
+HIP97649, Alpha Aql
+HIP98036, Beta Aql
+HIP99473, Theta Aql
+HIP97804, Eta Aql
+HIP95501, Delta Aql
+HIP93747, Zeta Aql
+}
+
+# Aql Tail
+ mesh -c 1 -s wire {
+
+HIP95501, Delta Aql
+HIP93805, Lambda Aql
+HIP93429, 12 Aql
+}
+
+# Ara main part
+ mesh -c 1 -s wire {
+
+HIP88714, Theta Ara
+HIP85792, Alpha Ara
+HIP85258, Beta Ara
+HIP85267, Gamma Ara
+HIP83081, Zeta Ara
+HIP83153, Epsilon1 Ara
+HIP85792, Alpha Ara
+}
+
+# Ara Delta Leg
+ mesh -c 1 -s wire {
+
+HIP85267, Gamma Ara
+HIP85727, Delta Ara
+}
+
+# Ara Eta leg
+ mesh -c 1 -s wire {
+
+HIP83081, Zeta Ara
+HIP82363, Eta Ara
+}
+
+# Ari Aries
+ mesh -c 2 -s wire {
+
+HIP8832, Gamma Ari
+HIP8903, Beta Ari
+HIP9884, Alpha Ari
+HIP13209, 41 Ari
+}
+
+# Aur Auriga
+ mesh -c 1 -s wire {
+
+HIP25428, Beta Tau
+HIP28380, Theta Aur
+HIP28360, Beta Aur
+HIP24608, Alpha Aur
+HIP23416, Epsilon Aur
+HIP23767, Eta Aur
+HIP23453, Zeta Aur
+HIP23015, Iota Aur
+HIP25428, Beta Tau
+}
+
+# Boo Lower part
+ mesh -c 1 -s wire {
+
+HIP67459, Upsilon Boo
+HIP67275, Tau Boo
+HIP67927, Eta Boo
+HIP69673, Alpha Boo
+HIP71762, Pi Boo
+HIP71795, Zeta Boo
+}
+
+# Boo Upper part
+ mesh -c 1 -s wire {
+
+HIP69673, Alpha Boo
+HIP71053, Rho Boo
+HIP71075, Gamma Boo
+HIP73555, Beta Boo
+HIP74666, Delta Boo
+HIP72105, Epsilon Boo
+HIP69673, Alpha Boo
+}
+
+# Cae Caelum
+ mesh -c 1 -s wire {
+
+HIP21770, Alpha Cae
+HIP21861, Beta Cae
+}
+
+# Cam Camelopardalis
+ mesh -c 1 -s wire {
+
+HIP16281, HD 21389
+HIP17884, HD 23475
+HIP17959, Gamma Cam
+HIP23522, Beta Cam
+HIP23040, 7 Cam
+}
+
+# Cnc Lower part
+ mesh -c 2 -s wire {
+
+HIP44066, Alpha Cnc
+HIP42911, Delta Cnc
+HIP40526, Beta Cnc
+}
+
+# Cnc Upper part
+ mesh -c 2 -s wire {
+
+HIP42911, Delta Cnc
+HIP42806, Gamma Cnc
+HIP43103, Iota1 Cnc
+}
+
+# CVn Canes Venatici
+ mesh -c 1 -s wire {
+
+HIP63125, Alpha2 CVn
+HIP61317, Beta CVn
+}
+
+# CMa Upper part
+ mesh -c 1 -s wire {
+
+HIP30324, Beta CMa
+HIP32349, Alpha CMa
+HIP33347, Iota CMa
+HIP34045, Gamma CMa
+HIP33160, Theta CMa
+}
+
+# CMa Lower part
+ mesh -c 1 -s wire {
+
+HIP32349, Alpha CMa
+HIP33977, Omicron2 CMa
+HIP34444, Delta CMa
+HIP33579, Sigma CMa
+HIP33579, Epsilon CMa
+}
+
+# CMa left leg
+ mesh -c 1 -s wire {
+
+HIP34444, Delta CMa
+HIP35037, Omega CMa
+HIP35904, Eta CMa
+}
+
+# CMa Tail
+ mesh -c 1 -s wire {
+
+HIP35037, Omega CMa
+HIP35415, Tau CMa
+}
+
+# CMi Canis Minor
+ mesh -c 1 -s wire {
+
+HIP37279, Alpha CMi
+HIP36188, Beta CMi
+}
+
+# Cap Upper part
+ mesh -c 2 -s wire {
+
+HIP100064, Alpha2 Cap
+HIP100345, Beta Cap
+HIP104139, Theta Cap
+HIP105515, Iota Cap
+HIP106985, Gamma Cap
+HIP107556, Delta Cap
+}
+
+# Cap Lower part
+ mesh -c 2 -s wire {
+
+HIP107556, Delta Cap
+HIP106723, Epsilon Cap
+HIP105881, Zeta Cap
+HIP104234, 24 Cap
+HIP102978, Omega Cap
+HIP102485, Psi Cap
+HIP100345, Beta Cap
+}
+
+# Car Carina
+ mesh -c 1 -s wire {
+
+HIP48002, Upsilon Car
+HIP45238, Beta Car
+HIP50099, Omega Car
+HIP52419, Theta Car
+HIP51576, HD 91465
+HIP50371, HD 89388
+HIP45556, Iota Car
+HIP41037, Epsilon Car
+HIP38827, Chi Car
+HIP30438, Alpha Car
+}
+
+# Cas Cassiopeia
+ mesh -c 1 -s wire {
+
+HIP746, Beta Cas
+HIP3179, Alpha Cas
+HIP4427, Gamma Cas
+HIP6686, Delta Cas
+HIP8886, Epsilon Cas
+}
+
+# Cen Lower part to Beta
+ mesh -c 1 -s wire {
+
+HIP56561, Lambda Cen
+HIP57439, HD 102350
+HIP55425, Pi Cen
+HIP59449, Rho Cen
+HIP59196, Delta Cen
+HIP60808, Sigma Cen
+HIP61932, Gamma Cen
+HIP66657, Epsilon Cen
+HIP68702, Beta Cen
+}
+
+# Cen Vertical Part
+ mesh -c 1 -s wire {
+
+HIP71683, Alpha1 Cen
+HIP66657, Epsilon Cen
+HIP68002, Zeta Cen
+HIP67472, Mu Cen
+HIP67464, Nu Cen
+HIP68933, Theta Cen
+}
+
+# Cen Upper part
+ mesh -c 1 -s wire {
+
+HIP65109, Iota Cen
+HIP65936, d Cen
+HIP67464, Nu Cen
+HIP71352, Eta Cen
+HIP73334, Kappa Cen
+}
+
+# Cep Lower Part
+ mesh -c 1 -s wire {
+
+HIP110991, Delta Cep
+HIP109857, Epsilon Cep
+HIP109492, Zeta Cep
+HIP105199, Alpha Cep
+HIP102422, Eta Cep
+HIP101093, Theta Cep
+}
+
+# Cep Upper part
+ mesh -c 1 -s wire {
+
+HIP109492, Zeta Cep
+HIP112724, Iota Cep
+HIP116727, Gamma Cep
+HIP106032, Beta Cep
+HIP105199, Alpha Cep
+}
+
+# Cet the whole damn whale
+ mesh -c 1 -s wire {
+
+HIP12706, Gamma Cet
+HIP14135, Alpha Cet
+HIP13954, Lambda Cet
+HIP12828, Mu Cet
+HIP11484, Xi2 Cet
+HIP12093, Nu Cet
+HIP12706, Gamma Cet
+HIP12387, Delta Cet
+HIP10826, Omicron Cet
+HIP8645, Zeta Cet
+HIP6537, Theta Cet
+HIP5364, Eta Cet
+HIP1562, Iota Cet
+HIP3419, Beta Cet
+HIP8102, Tau Cet
+HIP8645, Zeta Cet
+}
+
+# Cha Chamaeleon
+ mesh -c 1 -s wire {
+
+HIP40702, Alpha Cha
+HIP51839, Gamma Cha
+HIP60000, Beta Cha
+HIP52633, Delta2 Cha
+HIP40888, Theta Cha
+HIP40702, Alpha Cha
+}
+
+# Cir Circinus
+ mesh -c 1 -s wire {
+
+HIP74824, Beta Cir
+HIP71908, Alpha Cir
+HIP75323, Gamma Cir
+}
+
+# Col wings
+ mesh -c 1 -s wire {
+
+HIP30277, Delta Col
+HIP29807, Kappa Col
+HIP28199, Gamma Col
+HIP27628, Beta Col
+HIP26634, Alpha Col
+HIP25859, Epsilon Col
+}
+
+# Col body
+ mesh -c 1 -s wire {
+
+HIP27628, Beta Col
+HIP28328, Eta Col
+}
+
+# Com Coma
+ mesh -c 1 -s wire {
+
+HIP64241, Alpha Com
+HIP64394, Beta Com
+HIP60742, Gamma Com
+}
+
+# CrA Crown
+ mesh -c 1 -s wire {
+
+HIP93174, Epsilon CrA
+HIP93825, Gamma CrA
+HIP94114, Alpha CrA
+HIP94160, Beta CrA
+HIP94005, Delta CrA
+HIP93542, Zeta CrA
+}
+
+# CrB Crown
+ mesh -c 1 -s wire {
+
+HIP76127, Theta CrB
+HIP75695, Beta CrB
+HIP76267, Alpha CrB
+HIP76952, Gamma CrB
+HIP77512, Delta CrB
+HIP78159, Epsilon CrB
+HIP78493, Iota CrB
+}
+
+# Crv Corvus
+ mesh -c 1 -s wire {
+
+HIP59199, Alpha Crv
+HIP59316, Epsilon Crv
+HIP59803, Gamma Crv
+HIP60965, Delta Crv
+HIP61359, Beta Crv
+HIP59316, Epsilon Crv
+}
+
+# Crt the cup part
+ mesh -c 1 -s wire {
+
+HIP58188, Eta Crt
+HIP57283, Zeta Crt
+HIP55705, Gamma Crt
+HIP55282, Delta Crt
+HIP55687, Epsilon Crt
+HIP56633, Theta Crt
+}
+
+# Crt the lower part
+ mesh -c 1 -s wire {
+
+HIP55705, Gamma Crt
+HIP54682, Beta Crt
+HIP53740, Alpha Crt
+HIP55282, Delta Crt
+}
+
+# Cru north-south
+ mesh -c 1 -s wire {
+
+HIP61084, Gamma Cru
+HIP60718, Alpha Cru
+}
+
+# Cru east-west
+ mesh -c 1 -s wire {
+
+HIP59747, Delta Cru
+HIP62434, Beta Cru
+}
+
+# Cyg body
+ mesh -c 1 -s wire {
+
+HIP102098, Alpha Cyg
+HIP100453, Gamma Cyg
+HIP98110, Eta Cyg
+HIP96683, Phi Cyg
+HIP95951, Beta2 Cyg
+}
+
+# Cyg wings
+ mesh -c 1 -s wire {
+
+HIP94779, Kappa Cyg
+HIP95853, Iota2 Cyg
+HIP97165, Delta Cyg
+HIP100453, Gamma Cyg
+HIP102488, Epsilon Cyg
+HIP104732, Zeta Cyg
+}
+
+# Del dolphin
+ mesh -c 1 -s wire {
+
+HIP101421, Epsilon Del
+HIP101769, Beta Del
+HIP101958, Alpha Del
+HIP102532, Gamma2 Del
+HIP102281, Delta Del
+HIP101769, Beta Del
+}
+
+# Dor Main body
+ mesh -c 1 -s wire {
+
+HIP19893, Gamma Dor
+HIP21281, Alpha Dor
+HIP23708, Zeta Dor
+HIP26069, Beta Dor
+HIP27100, Delta Dor
+}
+
+# Dor tail
+ mesh -c 1 -s wire {
+
+HIP26069, Beta Dor
+HIP27890, Gli224.1
+}
+
+# Dra dragon
+ mesh -c 1 -s wire {
+
+HIP87585, Zeta Dra
+HIP87833, Gamma Dra
+HIP85670, Beta Dra
+HIP85819, Nu2 Dra
+HIP87585, Zeta Dra
+HIP94376, Delta Dra
+HIP97433, Epsilon Dra
+HIP94648, Tau Dra
+HIP89937, Chi Dra
+HIP86614, Psi1 Dra
+HIP83895, Zeta Dra
+HIP80331, Eta Dra
+HIP78527, Theta Dra
+HIP75458, Iota Dra
+HIP68756, Alpha Dra
+HIP61281, Kappa Dra
+HIP56211, Lambda Dra
+}
+
+# Equ horse
+ mesh -c 1 -s wire {
+
+HIP104987, Alpha Equ
+HIP105570, Beta Equ
+HIP104858, Delta Equ
+HIP104521, Gamma Equ
+HIP104987, Alpha Equ
+}
+
+# Eri river
+ mesh -c 1 -s wire {
+
+HIP23972, Lambda Eri
+HIP23875, Beta Eri
+HIP22701, Omega Eri
+HIP22109, Mu Eri
+HIP21444, Nu Eri
+HIP19587, Omicron1 Eri
+HIP18543, Beta Eri
+HIP17378, Delta Eri
+HIP16537, Epsilon Eri
+HIP15197, Zeta Eri
+HIP13701, Eta Eri
+HIP12843, Tau1 Eri
+HIP14146, Tau3 Eri
+HIP15474, Tau4 Eri
+HIP16611, Tau5 Eri
+HIP17651, Tau6 Eri
+HIP18216, Tau8 Eri
+HIP18673, Tau9 Eri
+HIP21248, Upsilon1 Eri
+HIP21393, Upsilon2 Eri
+HIP20535, Upsilon3 Eri
+HIP20042, Upsilon4 Eri
+HIP17874, HD 24160
+HIP17797, HD 24071
+HIP16870, HD 22663
+HIP15510, HD 20794
+HIP13847, HD 18622
+HIP12486, HD 16815
+HIP12413, HD 16754
+HIP11407, Kappa Eri
+HIP10602, Phi Eri
+HIP9007, Chi Eri
+HIP7588, Alpha Eri
+}
+
+# For furance
+ mesh -c 1 -s wire {
+
+HIP14879, Alpha For
+HIP13147, Beta For
+HIP9677, Nu For
+}
+
+# Gem Bodies
+ mesh -c 2 -s wire {
+
+HIP30343, Mu Gem
+HIP32246, Epsilon Gem
+HIP34693, Tau Gem
+HIP36850, Alpha Gem
+HIP37826, Beta Gem
+HIP35550, Delta Gem
+HIP34088, Zeta Gem
+HIP31681, Gamma Gem
+}
+
+# Gem Feet
+ mesh -c 2 -s wire {
+
+HIP32362, Xi Gem
+HIP31681, Gamma Gem
+HIP30883, Nu Gem
+HIP30343, Mu Gem
+HIP29655, Eta Gem
+}
+
+# Gru Body
+ mesh -c 1 -s wire {
+
+HIP108085, Gamma Gru
+HIP109111, Lambda Gru
+HIP109908, Mu1 Gru
+HIP110997, Delta1 Gru
+HIP112122, Beta Gru
+HIP112623, Epsilon Gru
+HIP113638, Zeta Gru
+}
+
+# Gru Wings
+ mesh -c 1 -s wire {
+
+HIP114131, Theta Gru
+HIP114421, Iota Gru
+HIP112122, Beta Gru
+HIP109268, Alpha Gru
+}
+
+# Her Arms
+ mesh -c 1 -s wire {
+
+HIP86414, Iota Her
+HIP87808, Theta Her
+HIP85112, Rho Her
+HIP84380, Pi Her
+HIP81833, Eta Her
+HIP81126, Sigma Her
+HIP79992, Tau Her
+HIP79101, Phi Her
+}
+
+# Her Legs
+ mesh -c 1 -s wire {
+
+HIP88794, Omicron Her
+HIP87933, Xi Her
+HIP86974, Mu Her
+HIP85693, Lambda Her
+HIP84379, Delta Her
+HIP83207, Epsilon Her
+HIP81693, Zeta Her
+HIP80816, Beta Her
+HIP84345, Alpha Her
+}
+
+# Her Foot
+ mesh -c 1 -s wire {
+
+HIP80816, Beta Her
+HIP80170, Gamma Her
+}
+
+# Her left body
+ mesh -c 1 -s wire {
+
+HIP84380, Pi Her
+HIP83207, Epsilon Her
+}
+
+# Her right body
+ mesh -c 1 -s wire {
+
+HIP81833, Eta Her
+HIP81693, Zeta Her
+}
+
+# Hor clock
+ mesh -c 1 -s wire {
+
+HIP19747, Alpha Hor
+HIP12653, Iota Hor
+HIP12225, Eta Hor
+HIP12484, Zeta Hor
+HIP14240, Mu Hor
+HIP13935, Beta Hor
+}
+
+# Hya snake
+ mesh -c 1 -s wire {
+
+HIP43813, Zeta Hya
+HIP42799, Eta Hya
+HIP42402, Sigma Hya
+HIP42313, Delta Hya
+HIP43109, Epsilon Hya
+HIP43813, Zeta Hya
+HIP45336, Theta Hya
+HIP47431, Iota Hya
+HIP46390, Alpha Hya
+HIP48356, Upsilon1 Hya
+HIP49841, Lambda Hya
+HIP51069, Mu Hya
+HIP52943, Nu Hya
+HIP56343, Xi Hya
+HIP57936, Beta Hya
+HIP64166, Psi Hya
+HIP64962, Gamma Hya
+HIP68895, Pi Hya
+}
+
+# Hyi snake
+ mesh -c 1 -s wire {
+
+HIP9236, Alpha Hyi
+HIP2021, Beta Hyi
+HIP17678, Gamma Hyi
+HIP9236, Alpha Hyi
+}
+
+# Ind Upper part
+ mesh -c 1 -s wire {
+
+HIP101772, Alpha Ind
+HIP105319, Theta Ind
+}
+
+# Ind Lower part
+ mesh -c 1 -s wire {
+
+HIP108431, Delta Ind
+HIP105319, Theta Ind
+HIP103227, Beta Ind
+}
+
+# Lac lizard
+ mesh -c 1 -s wire {
+
+HIP109937, HD 211388
+HIP109754, HD 211073
+HIP111104, HD 213420
+HIP110351, HD 212120
+HIP111022, HD 213310
+HIP110609, HD 212593
+HIP111169, Alpha Lac
+HIP110538, Beta Lac
+}
+
+# Leo body
+ mesh -c 2 -s wire {
+
+HIP49669, Alpha Leo
+HIP54879, Theta Leo
+HIP57632, Beta Leo
+HIP54872, Delta Leo
+HIP50583, Gamma Leo
+HIP49583, Eta Leo
+HIP49669, Alpha Leo
+}
+
+# Leo Head
+ mesh -c 2 -s wire {
+
+HIP50583, Gamma Leo
+HIP50335, Zeta Leo
+HIP48455, Mu Leo
+HIP47908, Epsilon Leo
+}
+
+# LMi l'il lion
+ mesh -c 1 -s wire {
+
+HIP53229, Omicron LMi
+HIP51233, Beta LMi
+HIP49593, HD 87696
+}
+
+# Lep Upper part
+ mesh -c 1 -s wire {
+
+HIP28103, Eta Lep
+HIP27288, Zeta Lep
+HIP25985, Alpha Lep
+HIP24305, Mu Lep
+}
+
+# Lep Lower part
+ mesh -c 1 -s wire {
+
+HIP27654, Delta Lep
+HIP27072, Gamma Lep
+HIP25606, Beta Lep
+HIP23685, Epsilon Lep
+}
+
+# Lep connecting part
+ mesh -c 1 -s wire {
+
+HIP25985, Alpha Lep
+HIP25606, Beta Lep
+}
+
+# Lib main part
+ mesh -c 2 -s wire {
+
+HIP78207, HD 142983
+HIP77853, Theta Lib
+HIP77060, Eta Lib
+HIP76333, Gamma Lib
+HIP74785, Beta Lib
+HIP72622, Alpha2 Lib
+HIP73714, Sigma Lib
+HIP76470, Upsilon Lib
+HIP76600, Tau Lib
+}
+
+# Lib connecting part
+ mesh -c 2 -s wire {
+
+HIP74785, Beta Lib
+HIP73714, Sigma Lib
+}
+
+# Lup main part
+ mesh -c 1 -s wire {
+
+HIP78970, Theta Lup
+HIP78384, Eta Lup
+HIP76297, Gamma Lup
+HIP75264, Epsilon Lup
+HIP74376, Kappa1 Lup
+HIP74395, Zeta Lup
+HIP71860, Alpha Lup
+HIP73273, Beta Lup
+HIP75164, Delta Lup
+HIP75177, Phi1 Lup
+HIP77634, Chi Lup
+}
+
+# Lup connector
+ mesh -c 1 -s wire {
+
+HIP75164, Delta Lup
+HIP76297, Gamma Lup
+}
+
+# Lyn lynx
+ mesh -c 1 -s wire {
+
+HIP45860, Alpha Lyn
+HIP45688, HD 80081
+HIP44248, HD 76943
+HIP41075, HD 70272
+HIP36145, HD 58142
+HIP33449, HD 50522
+HIP30060, HD 43378
+}
+
+# Lyr harp
+ mesh -c 1 -s wire {
+
+HIP91926, Epsilon2 Lyr
+HIP91262, Alpha Lyr
+HIP91971, Zeta1 Lyr
+HIP92420, Beta Lyr
+HIP93194, Gamma Lyr
+HIP92791, Delta2 Lyr
+HIP91971, Zeta1 Lyr
+}
+
+# Men table
+ mesh -c 1 -s wire {
+
+HIP23467, Beta Men
+HIP22871, Eta Men
+HIP25918, Gamma Men
+HIP29271, Alpha Men
+}
+
+# Mic microscope
+ mesh -c 1 -s wire {
+
+HIP102831, Alpha Mic
+HIP103738, Gamma Mic
+HIP105140, Epsilon Mic
+HIP105382, Theta1 Mic
+}
+
+# Mon Upper part
+ mesh -c 1 -s wire {
+
+HIP31216, HD 46300
+HIP30422, HD 44770
+HIP32578, HD 49293
+HIP34724, Delta Mon
+HIP37447, Alpha Mon
+HIP39863, Zeta Mon
+}
+
+# Mon lower part
+ mesh -c 1 -s wire {
+
+HIP34724, Delta Mon
+HIP30867, Beta Mon (MO)
+HIP29651, Gamma Mon
+}
+
+# Mus long part
+ mesh -c 1 -s wire {
+
+HIP63613, Delta Mus
+HIP61585, Alpha Mus
+HIP59929, Epsilon Mus
+HIP57363, Lambda Mus
+}
+
+# Mus short part
+ mesh -c 1 -s wire {
+
+HIP62322, Beta Mus
+HIP61585, Alpha Mus
+HIP61199, Gamma Mus
+}
+
+# Nor level
+ mesh -c 1 -s wire {
+
+HIP80582, Epsilon Nor
+HIP80000, Gamma2 Nor
+HIP78639, Eta Nor
+}
+
+# Oct octant
+ mesh -c 1 -s wire {
+
+HIP70638, Delta Oct
+HIP112405, Beta Oct
+HIP107089, Nu Oct
+HIP70638, Delta Oct
+}
+
+# Oph main body
+ mesh -c 1 -s wire {
+
+HIP84970, Theta Oph
+HIP85340, HD 157792
+HIP84893, Xi Oph
+HIP84012, Eta Oph
+HIP81377, Zeta Oph
+HIP79882, Epsilon Oph
+HIP79593, Delta Oph
+HIP80883, Lambda Oph
+HIP83000, Kappa Oph
+HIP86032, Alpha Oph
+HIP86742, Beta Oph
+HIP84012, Eta Oph
+}
+
+# Oph arm
+ mesh -c 1 -s wire {
+
+HIP86742, Beta Oph
+HIP87108, Gamma Oph
+HIP88048, Nu Oph
+}
+
+# Ori Body and club
+ mesh -c 3 -s wire {
+
+HIP27989, Alpha Ori
+HIP26207, Lambda Ori
+HIP25336, Gamma Ori
+HIP25930, Delta Ori
+HIP25281, Eta Ori
+HIP24436, Beta Ori
+HIP27366, Kappa Ori
+HIP26727, Zeta Ori
+HIP27989, Alpha Ori
+HIP28614, Mu Ori
+HIP29426, Xi Ori
+HIP28691, HD 41040
+HIP27913, Chi2 Ori
+HIP29038, Nu Ori
+HIP29426, Xi Ori
+}
+
+# Ori belt
+ mesh -c 3 -s wire {
+
+HIP26727, Zeta Ori
+HIP26311, Epsilon Ori
+HIP25930, Delta Ori
+}
+
+# Ori arm to shield
+ mesh -c 3 -s wire {
+
+HIP25336, Gamma Ori
+HIP22449, Pi3 Ori
+}
+
+# Ori shield
+ mesh -c 3 -s wire {
+
+HIP22845, Pi1 Ori
+HIP22509, Pi2 Ori
+HIP22449, Pi3 Ori
+HIP22549, Pi4 Ori
+HIP22797, Pi5 Ori
+HIP23123, Pi6 Ori
+}
+
+# Pav peacock
+ mesh -c 1 -s wire {
+
+HIP100751, Alpha Pav
+HIP102395, Beta Pav
+HIP98495, Epsilon Pav
+HIP91792, Zeta Pav
+HIP86929, Eta Pav
+HIP88866, Pi Pav
+HIP90098, Xi Pav
+HIP92609, Lambda Pav
+HIP99240, Delta Pav
+HIP102395, Beta Pav
+HIP105858, Gamma Pav
+}
+
+# Peg great square
+ mesh -c 1 -s wire {
+
+HIP677, Alpha And
+HIP1067, Gamma Peg
+HIP113963, Alpha Peg
+HIP113881, Beta Peg
+HIP677, Alpha And
+}
+
+# Peg wings
+ mesh -c 1 -s wire {
+
+HIP107354, Kappa Peg
+HIP109176, Iota Peg
+HIP112158, Eta Peg
+HIP113881, Beta Peg
+HIP112748, Mu Peg
+HIP112440, Lambda Peg
+HIP107348, HD 206859
+HIP105502, HD 203504
+}
+
+# Peg lower leg
+ mesh -c 1 -s wire {
+
+HIP113963, Alpha Peg
+HIP112447, Xi Peg
+HIP112029, Zeta Peg
+HIP109427, Theta Peg
+HIP107315, Epsilon Peg
+}
+
+# Per upper part
+ mesh -c 1 -s wire {
+
+HIP8068, Phi Per
+HIP13268, Eta Per
+HIP14328, Gamma Per
+HIP15863, Alpha Per
+}
+
+# Per lower part
+ mesh -c 1 -s wire {
+
+HIP13254, HD 17584
+HIP14354, Rho Per
+HIP14576, Beta Per
+HIP14668, Kappa Per
+HIP15863, Alpha Per
+HIP17358, Delta Per
+HIP18532, Epsilon Per
+HIP18614, Xi Per
+HIP18246, Zeta Per
+HIP17448, Omicron Per
+}
+
+# Phe upper part
+ mesh -c 1 -s wire {
+
+HIP7083, Delta Phe
+HIP6867, Gamma Phe
+HIP4890, Beta Phe
+HIP2081, Alpha Phe
+HIP765, Epsilon Phe
+HIP116389, Iota Phe
+HIP116737, Theta Phe
+HIP117315, Sigma Phe
+}
+
+# Phe lower part
+ mesh -c 1 -s wire {
+
+HIP4890, Beta Phe
+HIP5348, Zeta Phe
+HIP3405, Eta Phe
+HIP765, Epsilon Phe
+}
+
+# Pic easel
+ mesh -c 1 -s wire {
+
+HIP27321, Beta Pic
+HIP27530, Gamma Pic
+HIP32607, Alpha Pic
+}
+
+# Psc fishes
+ mesh -c 2 -s wire {
+
+HIP116771, Iota Psc
+HIP116928, Lambda Psc
+HIP115738, Kappa Psc
+HIP114971, Gamma Psc
+HIP115830, Theta Psc
+HIP116771, Iota Psc
+HIP118268, Omega Psc
+HIP3786, Delta Psc
+HIP4906, Epsilon Psc
+HIP7884, Nu Psc
+HIP9487, Alpha Psc
+HIP8198, Omicron Psc
+HIP7097, Eta Psc
+HIP5742, Phi Psc
+HIP6193, Upsilon Psc
+HIP5586, Tau Psc
+}
+
+# PsA south fish
+ mesh -c 1 -s wire {
+
+HIP113368, Alpha PsA
+HIP113246, Delta PsA
+HIP112948, Gamma PsA
+HIP111188, Beta PsA
+HIP109285, Mu PsA
+HIP107380, Iota PsA
+HIP107608, Theta PsA
+HIP108661, Eta PsA
+HIP109789, Lambda PsA
+HIP111954, Epsilon PsA
+HIP113368, Alpha PsA
+}
+
+# Pup stern
+ mesh -c 1 -s wire {
+
+HIP39757, Rho Pup
+HIP39429, Zeta Pup
+HIP36377, Sigma Pup
+HIP34922, HD 56096
+HIP32768, Tau Pup
+HIP31685, Nu Pup
+HIP35264, Pi Pup
+HIP37229, k Pup
+HIP38170, Xi Pup
+HIP39757, Rho Pup
+}
+
+# Pyx compass
+ mesh -c 1 -s wire {
+
+HIP42515, Beta Pyx
+HIP42828, Alpha Pyx
+HIP43409, Gamma Pyx
+}
+
+# Ret net
+ mesh -c 1 -s wire {
+
+HIP19780, Alpha Ret
+HIP17440, Beta Ret
+HIP18597, Delta Ret
+HIP19921, Epsilon Ret
+HIP19780, Alpha Ret
+}
+
+# Sge back
+ mesh -c 1 -s wire {
+
+HIP96757, Alpha Sge
+HIP97365, Delta Sge
+HIP96837, Beta Sge
+}
+
+# Sge front
+ mesh -c 1 -s wire {
+
+HIP97365, Delta Sge
+HIP98337, Gamma Sge
+}
+
+# Sgr eapot
+ mesh -c 2 -s wire {
+
+HIP89642, Eta Sgr
+HIP90185, Epsilon Sgr
+HIP89931, Delta Sgr
+HIP90496, Lambda Sgr
+HIP92041, Phi Sgr
+HIP93506, Zeta Sgr
+HIP93864, Tau Sgr
+HIP92855, Sigma Sgr
+HIP92041, Phi Sgr
+}
+
+# Sgr spout
+ mesh -c 2 -s wire {
+
+HIP89931, Delta Sgr
+HIP88635, Gamma Sgr
+HIP87072, HD 161592
+}
+
+# Sgr lid
+ mesh -c 2 -s wire {
+
+HIP90496, Lambda Sgr
+HIP89369, HD 167036
+}
+
+# Sgr top handle
+ mesh -c 2 -s wire {
+
+HIP92855, Sigma Sgr
+HIP93683, Omicron Sgr
+HIP94141, Pi Sgr
+HIP95168, Rho1 Sgr
+}
+
+# Sgr top handle
+ mesh -c 2 -s wire {
+
+HIP93683, Omicron Sgr
+HIP93085, Xi2 Sgr
+}
+
+# Sgr lower handle
+ mesh -c 2 -s wire {
+
+HIP93864, Tau Sgr
+HIP96465, HD 184707
+HIP98688, HD 189763
+HIP98412, Theta1 Sgr
+HIP98032, Iota Sgr
+HIP95294, Beta2 Sgr
+}
+
+# Sgr lower handle 
+ mesh -c 2 -s wire {
+
+HIP98032, Iota Sgr
+HIP95347, Alpha Sgr
+}
+
+# Sco Head
+ mesh -c 2 -s wire {
+
+HIP79374, Nu Sco
+HIP78820, Beta Sco
+HIP78401, Delta Sco
+HIP78265, Pi Sco
+HIP78104, Rho Sco
+}
+
+# Sco body
+ mesh -c 2 -s wire {
+
+HIP78401, Delta Sco
+HIP80112, Sigma Sco
+HIP80763, Alpha Sco
+HIP81266, Tau Sco
+HIP82396, Epsilon Sco
+HIP82514, Mu1 Sco
+HIP82729, Zeta2 Sco
+HIP84143, Eta Sco
+HIP86228, Theta Sco
+HIP87073, Iota1 Sco
+HIP86670, Kappa Sco
+HIP85927, Lambda Sco
+HIP85696, Upsilon Sco
+}
+
+# Scl sculptor
+ mesh -c 1 -s wire {
+
+HIP116231, Beta Scl
+HIP115102, Gamma Scl
+HIP117452, Delta Scl
+HIP4577, Alpha Scl
+}
+
+# Sct top part
+ mesh -c 1 -s wire {
+
+HIP92175, Beta Sct
+HIP91117, Alpha Sct
+}
+
+# Sct lower part
+ mesh -c 1 -s wire {
+
+HIP90595, Gamma Sct
+HIP91117, Alpha Sct
+HIP90135, Zeta Sct
+}
+
+# Ser Serpens Cauda
+ mesh -c 1 -s wire {
+
+HIP92946, Theta1 Ser
+HIP89962, Eta Ser
+HIP86565, Omicron Ser
+HIP86263, Xi Ser
+HIP84880, Nu Ser
+}
+
+# Ser Serpens Caput
+ mesh -c 1 -s wire {
+
+HIP77516, Mu Ser
+HIP77622, Epsilon Ser
+HIP77070, Alpha Ser
+HIP76276, Delta Ser
+HIP77233, Beta Ser
+HIP78072, Gamma Ser
+HIP77450, Kappa Ser
+HIP77233, Beta Ser
+}
+
+# Sex sextant
+ mesh -c 1 -s wire {
+
+HIP51437, Beta Sex
+HIP49641, Alpha Sex
+HIP48437, Gamma Sex
+}
+
+# Tau the horns
+ mesh -c 2 -s wire {
+
+HIP25428, Beta Tau
+HIP20889, Epsilon Tau
+HIP20455, Delta1 Tau
+HIP20205, Gamma Tau
+HIP20894, Theta2 Tau
+HIP21421, Alpha Tau
+HIP26451, Zeta Tau
+}
+
+# Tau the front
+ mesh -c 2 -s wire {
+
+HIP20205, Gamma Tau
+HIP18724, Lambda Tau
+HIP16083, Xi Tau
+HIP15900, Omicron Tau
+}
+
+# Tel scope
+ mesh -c 1 -s wire {
+
+HIP90568, Zeta Tel
+HIP90422, Alpha Tel
+HIP89112, Epsilon Tel
+}
+
+# Tri 
+ mesh -c 1 -s wire {
+
+HIP8796, Alpha Tri
+HIP10064, Beta Tri
+HIP10670, Gamma Tri
+HIP8796, Alpha Tri
+}
+
+# TrA triangle
+ mesh -c 1 -s wire {
+
+HIP82273, Alpha TrA
+HIP77952, Beta TrA
+HIP74946, Gamma TrA
+HIP82273, Alpha TrA
+}
+
+# Tuc toucan
+ mesh -c 1 -s wire {
+
+HIP110838, Delta Tuc
+HIP110130, Alpha Tuc
+HIP114996, Gamma Tuc
+HIP2484, Beta1 Tuc
+HIP1599, Zeta Tuc
+HIP118322, Epsilon Tuc
+HIP114996, Gamma Tuc
+}
+
+# UMa the dipper
+ mesh -c 3 -s wire {
+
+HIP67301, Eta UMa
+HIP65378, Zeta1 UMa
+HIP62956, Epsilon UMa
+HIP59774, Delta UMa
+HIP58001, Gamma UMa
+HIP53910, Beta UMa
+HIP54061, Alpha UMa
+HIP59774, Delta UMa
+}
+
+# UMa front body
+ mesh -c 3 -s wire {
+
+HIP54061, Alpha UMa
+HIP46733, HD 81937
+HIP41704, Omicron UMa
+HIP48319, Upsilon UMa
+HIP53910, Beta UMa
+}
+
+# UMa front leg
+ mesh -c 3 -s wire {
+
+HIP48319, Upsilon UMa
+HIP46853, Theta UMa
+HIP44127, Iota UMa
+HIP44471, Kappa UMa
+}
+
+# UMa rear left leg
+ mesh -c 3 -s wire {
+
+HIP58001, Gamma UMa
+HIP57399, Chi UMa
+HIP55219, Nu UMa
+}
+
+# UMa rear right leg
+ mesh -c 3 -s wire {
+
+HIP57399, Chi UMa
+HIP54539, Psi UMa
+HIP50801, Mu UMa
+HIP50372, Lambda UMa
+}
+
+# UMi bear
+ mesh -c 1 -s wire {
+
+HIP11767, Alpha UMi
+HIP85822, Delta UMi
+HIP82080, Epsilon UMi
+HIP77055, Zeta UMi
+HIP79822, Eta UMi
+HIP75097, Gamma UMi
+HIP72607, Beta UMi
+HIP77055, Zeta UMi
+}
+
+# Vel sail
+ mesh -c 1 -s wire {
+
+HIP52727, Mu Vel
+HIP48774, Phi Vel
+HIP45941, Kappa Vel
+HIP42913, Delta Vel
+HIP39953, Gamma Vel
+HIP42312, HD 73634
+HIP42884, HD 74772
+HIP44816, Lambda Vel
+HIP46651, Psi Vel
+HIP50191, HD 88955
+HIP51986, HD 92139
+HIP52727, Mu Vel
+}
+
+# Vir legs and body
+ mesh -c 2 -s wire {
+
+HIP71957, Mu Vir
+HIP69701, Iota Vir
+HIP69427, Kappa Vir
+HIP65474, Alpha Vir
+HIP64238, Theta Vir
+HIP61941, Gamma Vir
+HIP63090, Delta Vir
+HIP66249, Zeta Vir
+HIP68520, Tau Vir
+HIP72220, HD 130109
+}
+
+# Vir upper arm
+ mesh -c 2 -s wire {
+
+HIP63608, Epsilon Vir
+HIP63090, Delta Vir
+}
+
+# Vir lower arm
+ mesh -c 2 -s wire {
+
+HIP61941, Gamma Vir
+HIP60129, Eta Vir
+HIP57757, Beta Vir
+}
+
+# Vol fish
+ mesh -c 1 -s wire {
+
+HIP44382, Alpha Vol
+HIP41312, Beta Vol
+HIP39794, Epsilon Vol
+HIP37504, Zeta Vol
+HIP34481, Gamma2 Vol
+HIP35228, Delta Vol
+HIP39794, Epsilon Vol
+}
+
+# Vul fox
+ mesh -c 1 -s wire {
+
+HIP94827, HD 180968
+HIP95771, Alpha Vul
+HIP97886, HD 188260
+}
+

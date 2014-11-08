@@ -8,12 +8,9 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 console.log('cats');
 $.getJSON('data/stars.json', function(stars) {
-  debugger;
-  console.log('star');
-})
-.fail(function(data) {
+//.fail(function(data) {
   console.log(stars);
-  var stars = JSON.parse(data.responseText);
+ // var stars = JSON.parse(data.responseText);
 // create the particle variables
 var particleCount = stars.length,
     particles = new THREE.Geometry(),
@@ -29,7 +26,6 @@ var time = 0; //THE UNITS ARE MEGAYEARS.
 // now create the individual particles
 for (var p = 0; p < particleCount; p++) {
   var star = stars[p];
-  console.log('star');
   var coords = star['pos'];
   var velocities = star['speed'];
 
@@ -42,7 +38,7 @@ for (var p = 0; p < particleCount; p++) {
       );
 
   var distance = Math.sqrt(Math.pow(pX,2) + Math.pow(pY,2) + Math.pow(pZ,2));
-  var flux = star.lum / (4*3.14 (Math.pow(distance,2)));
+ // var flux = star.lum / (4*3.14 (Math.pow(distance,2)));
 
   particles.vertices.push(particle);
 }
@@ -68,4 +64,4 @@ function render() {
   renderer.render( scene, camera );
 }
 render();
-})
+});

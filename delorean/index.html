@@ -2,11 +2,11 @@
 <html>
   <head>
   <title>SPACE TIME</title>
-    <link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+    
     <style type="text/css">
 
       body {
-        font-family: 'Inconsolata';
+        font-family: 'Inconsolata', Arial;
         color:#fff;
         background-color: #000000;
         margin: 0px;
@@ -69,7 +69,26 @@ input[type=range]:focus::-webkit-slider-runnable-track {
         font-size: 4em;
       }
 
+      @media (max-width: 500px){
+        .slider_dude {
+          bottom:20px;
+
+        }
+        input[type=range]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          border: none;
+          height: 40px;
+          width: 150px;
+        }
+        #output {
+          bottom:40px;  
+        }
+        
+    }
+
+
     </style>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
   </head>
   <body>
     

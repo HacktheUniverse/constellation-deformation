@@ -96,7 +96,7 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     [self addGestureRecognizer:pinchGesture];
     panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panHandler:)];
     [panGesture setMaximumNumberOfTouches:1];
-    [panGesture setEnabled:NO];
+    [panGesture setEnabled:YES];
     [self addGestureRecognizer:panGesture];
 }
 -(void)setFieldOfView:(float)fieldOfView{
@@ -290,21 +290,25 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     }
 }
 -(void) panHandler:(UIPanGestureRecognizer*)sender{
-    static GLKVector3 touchVector;
     if([sender state] == 1){
-        touchVector = [self vectorFromScreenLocation:[sender locationInView:sender.view] inAttitude:_offsetMatrix];
+        [_delegater panStart];
     }
-    else if([sender state] == 2){
-        GLKVector3 nowVector = [self vectorFromScreenLocation:[sender locationInView:sender.view] inAttitude:_offsetMatrix];
-        GLKQuaternion q = GLKQuaternionFromTwoVectors(touchVector, nowVector);
-        _offsetMatrix = GLKMatrix4Multiply(_offsetMatrix, GLKMatrix4MakeWithQuaternion(q));
-        // in progress for preventHeadTilt
-//        GLKMatrix4 mat = GLKMatrix4Multiply(_offsetMatrix, GLKMatrix4MakeWithQuaternion(q));
-//        _offsetMatrix = GLKMatrix4MakeLookAt(0, 0, 0, -mat.m02, -mat.m12, -mat.m22,  0, 1, 0);
-    }
-    else{
-        _numberOfTouches = 0;
-    }
+    [_delegater panX:[sender translationInView:self].x];
+//    static GLKVector3 touchVector;
+//    if([sender state] == 1){
+//        touchVector = [self vectorFromScreenLocation:[sender locationInView:sender.view] inAttitude:_offsetMatrix];
+//    }
+//    else if([sender state] == 2){
+//        GLKVector3 nowVector = [self vectorFromScreenLocation:[sender locationInView:sender.view] inAttitude:_offsetMatrix];
+//        GLKQuaternion q = GLKQuaternionFromTwoVectors(touchVector, nowVector);
+//        _offsetMatrix = GLKMatrix4Multiply(_offsetMatrix, GLKMatrix4MakeWithQuaternion(q));
+//        // in progress for preventHeadTilt
+////        GLKMatrix4 mat = GLKMatrix4Multiply(_offsetMatrix, GLKMatrix4MakeWithQuaternion(q));
+////        _offsetMatrix = GLKMatrix4MakeLookAt(0, 0, 0, -mat.m02, -mat.m12, -mat.m22,  0, 1, 0);
+//    }
+//    else{
+//        _numberOfTouches = 0;
+//    }
 }
 #pragma mark- MERIDIANS
 -(void) makeLatitudeLines{
@@ -428,6 +432,9 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
         }
     }
     return self;
+}
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"^lisahdf");
 }
 -(bool) execute{
     glEnableClientState(GL_NORMAL_ARRAY);

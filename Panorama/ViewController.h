@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
+#import "PanoramaView.h"
 
-@interface ViewController : GLKViewController
+@interface ViewController : GLKViewController <PanoramaDelegate>
+@property (nonatomic) BOOL buttonTouched;
+@property float touchStartX;
+@property float delorianStartX;
 @end

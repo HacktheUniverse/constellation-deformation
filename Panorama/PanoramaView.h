@@ -9,7 +9,16 @@
  *
  * @discussion a dynamic GLKView with a touch and motion sensor interface to align and immerse the perspective inside an equirectangular panorama projection
  */
+@protocol PanoramaDelegate <NSObject>
+
+-(void) panStart;
+-(void) panX:(float)x;
+
+@end
+
 @interface PanoramaView : GLKView
+
+@property id <PanoramaDelegate> delegater;
 
 -(void) updateOrientation;
 

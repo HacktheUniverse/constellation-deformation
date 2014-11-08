@@ -11,6 +11,7 @@
 @interface Delorean : NSObject
 
 @property float x;
+@property float y;
 
 -(void)execute;
 

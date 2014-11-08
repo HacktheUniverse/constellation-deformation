@@ -31,6 +31,7 @@ function init() {
         s_red: { type: "f", value: []},
         s_green: { type: "f", value: []},
         s_blue: { type: "f", value: []},
+        s_opacity: {type: "f", value: []}
     };
 
     var material = new THREE.ShaderMaterial( {
@@ -41,12 +42,14 @@ function init() {
     var reds = attributes.s_red.value;
     var greens = attributes.s_green.value;
     var blues = attributes.s_blue.value;
+    var opacities = attributes.s_opacity.value;
 
     for (var i = 0; i < stars.length; i ++ ) {
       var star = stars[i];
       var coords = star.pos;
       var vertex = new THREE.Vector3();
       var color = findColor(star.color);
+
 
       vertex.x = coords[0];
       vertex.y = coords[1];
@@ -56,10 +59,17 @@ function init() {
       vertex.z0 = coords[2];
       vertex.velocities = star.speed;
 
+      var distance = Math.sqrt(Math.pow(vertex.x,2) + Math.pow(vertex.y,2) + Math.pow(vertex.z,2));
+      
+      var flux = star.lum / (4 * 3.14 * (Math.pow(distance,2)));
+      console.log(flux)
+      var star_opacity = flux;
+
       geometry.vertices.push( vertex );
       reds.push(color[0] / 255);
       greens.push(color[1] / 255 );
       blues.push(color[2] / 255);
+      opacities.push(star_opacity);
     }
     // var material = new THREE.PointCloudMaterial({ size: 3, sizeAttenuation:false });
 
@@ -138,7 +148,7 @@ function scale_time(value) {
   var one_year = Math.pow(10, -6);
   var log_input = Math.pow(10, Math.abs(value));
 
-  if (is_negative)  { console.log('NEGATIVE NEGATIVE'); log_input = log_input * -1;}
+  if (is_negative)  { log_input = log_input * -1;}
   return one_year * log_input;
 }
 
@@ -158,7 +168,7 @@ function timeToYear(time) {
 
 function animate() {
   var value = document.getElementById("time_slider").value
-  console.log(value);
+  
   // console.log(value)
   time = scale_time(value)
   $('#output').html('<h1>' + timeToYear(time) + '</h1>')

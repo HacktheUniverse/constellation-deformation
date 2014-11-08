@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+  <title>SPACE TIME</title>
     <link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
     <style type="text/css">
 
@@ -16,11 +17,15 @@
       }
       
       .slider_dude {
+        position: absolute;
+        bottom: 10px;
         background: white url(img/delorian.png) no-repeat scroll 50% 50%;
         width:100%;
       }
 
       #output {
+        position: absolute;
+        bottom:30px;
         width:100%;
       }
       h1 {
@@ -36,15 +41,18 @@
       attribute float s_red;
       attribute float s_blue;
       attribute float s_green;
+      attribute float s_opacity;
 
       varying float red;
       varying float blue;
       varying float green;
-
+      varying float opacity;
+      
      void main() {
       red = s_red;
       blue = s_blue;
       green = s_green;
+      opacity = s_opacity;
       gl_Position =  projectionMatrix *
                      modelViewMatrix *
                      vec4(position,1.0);
@@ -55,12 +63,13 @@
       varying float red;
       varying float blue;
       varying float green;
+      varying float opacity;
 
       void main() {
        gl_FragColor = vec4(red,    // R
                            blue,  // G
                            green,  // B
-                           1.0); // A
+                           opacity); // A
       }
     </div>
 

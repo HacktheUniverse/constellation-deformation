@@ -7,6 +7,9 @@
         margin: 0px;
         overflow: hidden;
       }
+      .hide {
+        display: none;
+      }
       .ui-slider-horizontal .ui-state-default {background: white url(img/delorian.png) no-repeat scroll 50% 50%;}
       
       .slider_dude {
@@ -17,7 +20,7 @@
   </head>
   <body>
 
-    <div id="vertexShader">
+    <div id="vertexShader" class="hide">
       attribute float s_red;
       attribute float s_blue;
       attribute float s_green;
@@ -36,7 +39,7 @@
       gl_PointSize = 3.0;
      }
     </div>
-    <div id="fragmentShader">
+    <div id="fragmentShader" class="hide">
       varying float red;
       varying float blue;
       varying float green;

@@ -139,6 +139,10 @@ function scale_time(value) {
   return one_year * log_input;
 }
 
+function timeToYear() {
+  
+}
+
 function animate() {
   var value = document.getElementById("time_slider").value
   console.log(value);

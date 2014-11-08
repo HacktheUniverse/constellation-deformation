@@ -17,6 +17,10 @@
     float *mag;
     unsigned int numStars;
     NSTimer *increment;
+    unsigned short *constellations;
+    unsigned int numConstellations;
+    unsigned short *constellationMeta;
+    unsigned int numConstellationMeta;
 }
 @end
 
@@ -36,9 +40,9 @@
 //id,x,y,z,colorb_v,lum,absmag,appmag,texnum,distly,dcalc,plx,plxerr,vx,vy,vz,speed,hipnum,name
 -(void)loadStars{
     NSString *path = [[NSBundle mainBundle] pathForResource:@"visible_stars" ofType:@"csv"];
-    NSMutableArray *array = [NSMutableArray arrayWithContentsOfCSVFile:path];
+    NSMutableArray *starArray = [NSMutableArray arrayWithContentsOfCSVFile:path];
 
-    NSLog(@"%d stars loaded",(int)array.count);
+    NSLog(@"%d stars loaded",(int)starArray.count);
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"constellations" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
@@ -46,23 +50,74 @@
     NSError* error;
     NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
-    NSLog(@"(%@) %@", error, json);
+//    NSLog(@"(%@) %@", error, json);
+    
+    NSLog(@"%@",[json allValues]);
+    
+    NSArray *jsonArray = [json allValues];
+    NSMutableArray *constellationIndexes = [NSMutableArray array];
+    NSMutableArray *constellationMetaM = [NSMutableArray array];
+    
+    
+    for(int i = 0; i < jsonArray.count; i++){  //iterate over constellations
+        NSArray *constellationPoints = jsonArray[i];
+        // begin operations on 1 constellation
+        int constellationStartIndex = -1;
+        int constellationLength = 0;
+        for(int j = 0; j < constellationPoints.count; j++){ // iterate over individual points in constellation
+            for(int k = 0; k < starArray.count; k++){  // search for a match in the big star database
+                NSArray *starData = [starArray objectAtIndex:k];
+                if(starData.count >= 19){
+                    NSString *starNames = [starData objectAtIndex:18];
+                    NSArray *HIP = [starNames componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+                    if([[HIP objectAtIndex:0] isEqualToString:constellationPoints[j]]){
+                        if(constellationStartIndex == -1) constellationStartIndex = constellationIndexes.count;
+                        [constellationIndexes addObject:[NSNumber numberWithInt:k]];
+                        constellationLength++;
+                    }
+                }
+            }
+        }
+        // store metadata
+        if(constellationStartIndex != -1){
+            [constellationMetaM addObject:[NSNumber numberWithInt:constellationStartIndex]];
+            [constellationMetaM addObject:[NSNumber numberWithInt:constellationLength]];
+        }
+    }
+    numConstellations = (unsigned int)constellationIndexes.count;
+    numConstellationMeta = (unsigned int)constellationMetaM.count;
 
+    constellations = malloc(sizeof(unsigned short)*numConstellations);
+    constellationMeta = malloc(sizeof(unsigned short) * numConstellationMeta);
+    for(int i = 0; i < numConstellations; i++){
+        constellations[i] = [[constellationIndexes objectAtIndex:i] unsignedShortValue];
+    }
+    for(int i = 0; i < numConstellationMeta; i++){
+        constellationMeta[i] = [[constellationMetaM objectAtIndex:i] unsignedShortValue];
+    }
+//    NSLog(@"%@", constellationIndexes);
+//    NSLog(@"%@", constellationMetaM);
+    for(int i = 0; i < numConstellations; i++){
+        NSLog(@"%d",constellations[i]);
+    }
+    for(int i = 0; i < numConstellationMeta; i++){
+        NSLog(@"%d",constellationMeta[i]);
+    }
     
     NSLog(@"constelltions loaded");
 
-    numStars = (int)array.count - 1;
+    numStars = (int)starArray.count - 1;
     stars = malloc(sizeof(float)*numStars*3);
     velocities = malloc(sizeof(float)*numStars*3);
     mag = malloc(sizeof(float)*numStars);
 
     for(int i = 0; i < numStars; i++){
-        stars[i*3+0] = [[[array objectAtIndex:i] objectAtIndex:1] floatValue];
-        stars[i*3+1] = [[[array objectAtIndex:i] objectAtIndex:2] floatValue];
-        stars[i*3+2] = [[[array objectAtIndex:i] objectAtIndex:3] floatValue];
-        velocities[i*3+0] = [[[array objectAtIndex:i] objectAtIndex:13] floatValue] / 1000 ;
-        velocities[i*3+1] = [[[array objectAtIndex:i] objectAtIndex:14] floatValue] / 1000 ;
-        velocities[i*3+2] = [[[array objectAtIndex:i] objectAtIndex:15] floatValue] / 1000 ;
+        stars[i*3+0] = [[[starArray objectAtIndex:i] objectAtIndex:1] floatValue];
+        stars[i*3+1] = [[[starArray objectAtIndex:i] objectAtIndex:2] floatValue];
+        stars[i*3+2] = [[[starArray objectAtIndex:i] objectAtIndex:3] floatValue];
+        velocities[i*3+0] = [[[starArray objectAtIndex:i] objectAtIndex:13] floatValue] / 1000 /5;
+        velocities[i*3+1] = [[[starArray objectAtIndex:i] objectAtIndex:14] floatValue] / 1000 /5;
+        velocities[i*3+2] = [[[starArray objectAtIndex:i] objectAtIndex:15] floatValue] / 1000 /5;
         
 //        float distance = sqrt(powf(stars[i*3+0],2) + powf(stars[i*3+1],2) + powf(stars[i*3+2],2));
 //        mag[i] = 2.5*log10f( powf((distance/10.0),2) ) + [[[array objectAtIndex:i] objectAtIndex:7] floatValue];
@@ -73,7 +128,8 @@
 //        }
 
 //        mag[i] = ( (2.44 + 6.5) / (2.44 + ([[[array objectAtIndex:i] objectAtIndex:7] floatValue])) - 1);// * 4 + 1;
-        mag[i] = 1.44+[[[array objectAtIndex:i] objectAtIndex:7] floatValue];
+        
+        mag[i] = 1.44+[[[starArray objectAtIndex:i] objectAtIndex:7] floatValue];
         mag[i] /= (1.44 + 6.5);
         mag[i] = 1-mag[i];
         
@@ -114,7 +170,21 @@
     
         glPushMatrix();
             // object code
+    
+// constellation lines
+    
     glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+    
+    glEnableClientState(GL_VERTEX_ARRAY);
+    for(int i = 0; i < numConstellationMeta*.5; i++){
+        glVertexPointer(3, GL_FLOAT, 0, stars);
+        glDrawElements(GL_LINE_LOOP, constellationMeta[i*2+1], GL_UNSIGNED_SHORT, &constellations[constellationMeta[i*2]]);
+    }
+    glDisableClientState(GL_VERTEX_ARRAY);
+
+    
+    
+// star points
     
     glPointSize(1);
     for(int i = 0; i < numStars; i++){

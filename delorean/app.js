@@ -1,5 +1,5 @@
 var container, stats;
-var camera, scene, renderer, particles, geometry, materials = [], parameters, i, h, color, size;
+var camera, scene, renderer, geometry, materials = [], parameters, i, h, color, size;
 var mouseX = 0, mouseY = 0;
 
 var windowHalfX = window.innerWidth / 2;
@@ -17,24 +17,48 @@ function init() {
   camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 3000 );
   //camera.position.z = 1000;
   scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0x000000, 0.0007);
+  //scene.fog = new THREE.FogExp2(0x000000, 0.0007);
   geometry = new THREE.Geometry();
   $.getJSON('data/stars.json', function(stars) {
+    // For messing w data
     window.star = stars[1];
+
+    $('h1').remove();
+
+    var attributes = {
+        s_red: { type: "f", value: []},
+        s_green: { type: "f", value: []},
+        s_blue: { type: "f", value: []},
+    };
+
+    var material = new THREE.ShaderMaterial( {
+      attributes: attributes,
+      vertexShader: document.getElementById( 'vertexShader' ).textContent,
+      fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+    });
+    var reds = attributes.s_red.value;
+    var greens = attributes.s_green.value;
+    var blues = attributes.s_blue.value;
 
     for (var i = 0; i < stars.length; i ++ ) {
       var star = stars[i];
       var coords = star.pos;
       var vertex = new THREE.Vector3();
+      var color = findColor(star.color);
+
       vertex.x = coords[0];
       vertex.y = coords[1];
       vertex.z = coords[2];
       vertex.velocities = star.speed;
 
       geometry.vertices.push( vertex );
+      reds.push(color[0] / 255);
+      greens.push(color[1] / 255 );
+      blues.push(color[2] / 255);
     }
-    material = new THREE.PointCloudMaterial( { size: 3, sizeAttenuation:false } );
-    particles = new THREE.PointCloud( geometry, material );
+    // var material = new THREE.PointCloudMaterial({ size: 3, sizeAttenuation:false });
+
+    var particles = new THREE.PointCloud( geometry, material );
     scene.add( particles );
   });
 
@@ -52,6 +76,28 @@ function init() {
   // document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 
   //  window.addEventListener( 'resize', onWindowResize, false );
+}
+
+function findColor(color) {
+  if(color > 1.1) {
+    return [255,241,229];
+    //return 0xFFF1E5;
+  } else if (color > 0.71) {
+    return [255,240,229];
+    //return 0xFFF0E5;
+  } else if (color > 0.45) {
+    return [255,237,229];
+    //return 0xFFEDE5;
+  } else if (color > 0.16) {
+    return [231,229,255];
+    //return 0xE7E5FF;
+  } else if (color > -0.15) {
+    return [229, 237, 255];
+    //return 0xE5EDFF;
+  } else {
+    return [229,238,255];
+    //return 0xE5EEFF;
+  }
 }
 
 function updateVertices(geometry) {

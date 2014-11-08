@@ -53,13 +53,13 @@
 		D55E8FA71828D2360076A9D7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D55E8FA81828D2360076A9D7 /* PanoramaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoramaView.h; sourceTree = "<group>"; };
 		D55E8FA91828D2360076A9D7 /* PanoramaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramaView.m; sourceTree = "<group>"; };
-		D55E8FAD1828D2360076A9D7 /* iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOS-Info.plist"; sourceTree = "<group>"; };
-		D55E8FAE1828D2360076A9D7 /* iOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOS-Prefix.pch"; sourceTree = "<group>"; };
+		D55E8FAD1828D2360076A9D7 /* Constellation-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Constellation-Info.plist"; sourceTree = "<group>"; };
+		D55E8FAE1828D2360076A9D7 /* Constellation-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Constellation-Prefix.pch"; sourceTree = "<group>"; };
 		D55E8FB01828D2360076A9D7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D55E8FB11828D2360076A9D7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D55E8FC81828D23C0076A9D7 /* PanoramaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramaTests.m; sourceTree = "<group>"; };
 		D55E8FCA1828D23C0076A9D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D55E8FCB1828D23D0076A9D7 /* iOSTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOSTests-Info.plist"; sourceTree = "<group>"; };
+		D55E8FCB1828D23D0076A9D7 /* ConstellationTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConstellationTests-Info.plist"; sourceTree = "<group>"; };
 		D55E8FD41828D3F50076A9D7 /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
 		D55E8FD51828D3F50076A9D7 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
 		D55E8FD61828D3F50076A9D7 /* 144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 144.png; sourceTree = "<group>"; };
@@ -72,11 +72,11 @@
 		D571EAA31A0DC2680085052A /* Tycho_2048_city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tycho_2048_city.png; sourceTree = "<group>"; };
 		D571EAA41A0DC2680085052A /* tycho_cyl_glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tycho_cyl_glow.png; sourceTree = "<group>"; };
 		D5C8B44B18A8E58700051A88 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		D5FAE07517C8956600AE6EC9 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5FAE07517C8956600AE6EC9 /* Constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FAE07817C8956600AE6EC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D5FAE07A17C8956600AE6EC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D5FAE07C17C8956600AE6EC9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		D5FAE09917C8956600AE6EC9 /* iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5FAE09917C8956600AE6EC9 /* ConstellationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConstellationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FAE09A17C8956600AE6EC9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D5FAE0B017C895AB00AE6EC9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		D5FAE0B217C895B200AE6EC9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -128,7 +128,7 @@
 			children = (
 				D55E8FC81828D23C0076A9D7 /* PanoramaTests.m */,
 				D55E8FC91828D23C0076A9D7 /* InfoPlist.strings */,
-				D55E8FCB1828D23D0076A9D7 /* iOSTests-Info.plist */,
+				D55E8FCB1828D23D0076A9D7 /* ConstellationTests-Info.plist */,
 			);
 			path = PanoramaTests;
 			sourceTree = "<group>";
@@ -148,9 +148,9 @@
 			children = (
 				D55E8FD31828D3F50076A9D7 /* icons */,
 				D55E8FA71828D2360076A9D7 /* main.m */,
-				D55E8FAD1828D2360076A9D7 /* iOS-Info.plist */,
+				D55E8FAD1828D2360076A9D7 /* Constellation-Info.plist */,
 				D55E8F9A1828D2360076A9D7 /* InfoPlist.strings */,
-				D55E8FAE1828D2360076A9D7 /* iOS-Prefix.pch */,
+				D55E8FAE1828D2360076A9D7 /* Constellation-Prefix.pch */,
 				D5C8B44B18A8E58700051A88 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
@@ -185,8 +185,8 @@
 		D5FAE07617C8956600AE6EC9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5FAE07517C8956600AE6EC9 /* iOS.app */,
-				D5FAE09917C8956600AE6EC9 /* iOSTests.xctest */,
+				D5FAE07517C8956600AE6EC9 /* Constellation.app */,
+				D5FAE09917C8956600AE6EC9 /* ConstellationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,9 +208,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5FAE07417C8956600AE6EC9 /* iOS */ = {
+		D5FAE07417C8956600AE6EC9 /* Constellation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5FAE0AA17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildConfigurationList = D5FAE0AA17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "Constellation" */;
 			buildPhases = (
 				D5FAE07117C8956600AE6EC9 /* Sources */,
 				D5FAE07217C8956600AE6EC9 /* Frameworks */,
@@ -220,14 +220,14 @@
 			);
 			dependencies = (
 			);
-			name = iOS;
+			name = Constellation;
 			productName = "360 Panorama";
-			productReference = D5FAE07517C8956600AE6EC9 /* iOS.app */;
+			productReference = D5FAE07517C8956600AE6EC9 /* Constellation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D5FAE09817C8956600AE6EC9 /* iOSTests */ = {
+		D5FAE09817C8956600AE6EC9 /* ConstellationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5FAE0AD17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "iOSTests" */;
+			buildConfigurationList = D5FAE0AD17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "ConstellationTests" */;
 			buildPhases = (
 				D5FAE09517C8956600AE6EC9 /* Sources */,
 				D5FAE09617C8956600AE6EC9 /* Frameworks */,
@@ -238,9 +238,9 @@
 			dependencies = (
 				D5FAE09F17C8956600AE6EC9 /* PBXTargetDependency */,
 			);
-			name = iOSTests;
+			name = ConstellationTests;
 			productName = "360 PanoramaTests";
-			productReference = D5FAE09917C8956600AE6EC9 /* iOSTests.xctest */;
+			productReference = D5FAE09917C8956600AE6EC9 /* ConstellationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -257,7 +257,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D5FAE07017C8956600AE6EC9 /* Build configuration list for PBXProject "iOS" */;
+			buildConfigurationList = D5FAE07017C8956600AE6EC9 /* Build configuration list for PBXProject "Constellation" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -270,8 +270,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5FAE07417C8956600AE6EC9 /* iOS */,
-				D5FAE09817C8956600AE6EC9 /* iOSTests */,
+				D5FAE07417C8956600AE6EC9 /* Constellation */,
+				D5FAE09817C8956600AE6EC9 /* ConstellationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -332,7 +332,7 @@
 /* Begin PBXTargetDependency section */
 		D5FAE09F17C8956600AE6EC9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5FAE07417C8956600AE6EC9 /* iOS */;
+			target = D5FAE07417C8956600AE6EC9 /* Constellation */;
 			targetProxy = D5FAE09E17C8956600AE6EC9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -432,10 +432,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Panorama/iOS-Prefix.pch";
-				INFOPLIST_FILE = "Panorama/iOS-Info.plist";
+				GCC_PREFIX_HEADER = "Panorama/Constellation-Prefix.pch";
+				INFOPLIST_FILE = "Panorama/Constellation-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = iOS;
+				PRODUCT_NAME = Constellation;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -445,10 +445,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Panorama/iOS-Prefix.pch";
-				INFOPLIST_FILE = "Panorama/iOS-Info.plist";
+				GCC_PREFIX_HEADER = "Panorama/Constellation-Prefix.pch";
+				INFOPLIST_FILE = "Panorama/Constellation-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = iOS;
+				PRODUCT_NAME = Constellation;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -463,13 +463,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Panorama/Panorama-Prefix.pch";
+				GCC_PREFIX_HEADER = "Panorama/Constellation-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "PanoramaTests/iOSTests-Info.plist";
-				PRODUCT_NAME = iOSTests;
+				INFOPLIST_FILE = "PanoramaTests/ConstellationTests-Info.plist";
+				PRODUCT_NAME = ConstellationTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -485,9 +485,9 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Panorama/Panorama-Prefix.pch";
-				INFOPLIST_FILE = "PanoramaTests/iOSTests-Info.plist";
-				PRODUCT_NAME = iOSTests;
+				GCC_PREFIX_HEADER = "Panorama/Constellation-Prefix.pch";
+				INFOPLIST_FILE = "PanoramaTests/ConstellationTests-Info.plist";
+				PRODUCT_NAME = ConstellationTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -496,7 +496,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5FAE07017C8956600AE6EC9 /* Build configuration list for PBXProject "iOS" */ = {
+		D5FAE07017C8956600AE6EC9 /* Build configuration list for PBXProject "Constellation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5FAE0A817C8956600AE6EC9 /* Debug */,
@@ -505,7 +505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5FAE0AA17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "iOS" */ = {
+		D5FAE0AA17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "Constellation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5FAE0AB17C8956600AE6EC9 /* Debug */,
@@ -514,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5FAE0AD17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "iOSTests" */ = {
+		D5FAE0AD17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "ConstellationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5FAE0AE17C8956600AE6EC9 /* Debug */,

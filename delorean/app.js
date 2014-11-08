@@ -148,16 +148,32 @@ function scale_time(value) {
   if (is_negative)  { log_input = log_input * -1;}
   return one_year * log_input;
 }
+function addCommas(nStr)
+{
+    if (nStr >= 1000 && nStr <= 3000) {
+      return nStr;
+    }
+    var sep = ',';
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + sep + '$2');
+    }
+    return x1 + x2;
+}
 
 function timeToYear(time) {
   var currentYear = 2014;
   var output_year = currentYear + (time * 1000000)
   output_year = Math.round(output_year);
   if (output_year < 0) {
-    output_year = Math.abs(output_year) + ' BCE'
+    output_year = addCommas(Math.abs(output_year)) + ' BCE'
   }
   else {
-    output_year = output_year + ' CE'
+    output_year = addCommas(output_year) + ' CE'
   }
   return output_year
 }

@@ -129,18 +129,30 @@ function scale_time(value) {
   //if 1 return 10E-6
   //2 return 10E-5
   //3 
+
   var value = value/10.0;
   var is_negative = time < 0;
 
-  var one_year = Math.pow(10, -6);
-  var log_input = Math.pow(10, Math.abs(value))
 
-  if (is_negative)  { log_input * -1;}
+  var one_year = Math.pow(10, -6);
+  var log_input = Math.pow(10, Math.abs(value));
+
+  if (is_negative)  { console.log('NEGATIVE NEGATIVE'); log_input * -1;}
   return one_year * log_input;
 }
 
-function timeToYear() {
-  
+function timeToYear(time) {
+  var currentYear = 2014
+  var output_year = currentYear + (time *1000000)
+  output_year = Math.round(output_year);
+  if (output_year < 0) {
+    output_year = output_year + ' BCE'
+  }
+  else {
+    output_year = output_year + ' CE'
+  }
+
+  return output_year
 }
 
 function animate() {
@@ -148,7 +160,7 @@ function animate() {
   console.log(value);
   // console.log(value)
   time = scale_time(value)
-  console.log(time)
+  $('#output').html('<h1>' + timeToYear(time) + '</h1>')
   requestAnimationFrame( animate );
 
   frames = frames + 1;

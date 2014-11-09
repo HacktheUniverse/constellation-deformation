@@ -5,6 +5,8 @@ constellation deformation.
 
 Challenge: Visualization
 
+## App name: SpaceTime
+
 ## Demos
 
 Web: https://spacetimeapp.herokuapp.com/

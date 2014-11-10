@@ -96,6 +96,7 @@
 		D5D7C0181A0E9207003B4987 /* Incos_num_9.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D7C00E1A0E9207003B4987 /* Incos_num_9.png */; };
 		D5D7C01A1A0E998E003B4987 /* delorean.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D7C0191A0E998E003B4987 /* delorean.png */; };
 		D5D7C01D1A0E9A24003B4987 /* Delorean.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D7C01C1A0E9A24003B4987 /* Delorean.m */; };
+		D5DB6FF41A111A46006594F9 /* Incos_comma.png in Resources */ = {isa = PBXBuildFile; fileRef = D5DB6FF31A111A46006594F9 /* Incos_comma.png */; };
 		D5FAE07917C8956600AE6EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FAE07817C8956600AE6EC9 /* Foundation.framework */; };
 		D5FAE09B17C8956600AE6EC9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FAE09A17C8956600AE6EC9 /* XCTest.framework */; };
 		D5FAE09C17C8956600AE6EC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FAE07817C8956600AE6EC9 /* Foundation.framework */; };
@@ -123,13 +124,13 @@
 		D55E8FA71828D2360076A9D7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D55E8FA81828D2360076A9D7 /* PanoramaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoramaView.h; sourceTree = "<group>"; };
 		D55E8FA91828D2360076A9D7 /* PanoramaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramaView.m; sourceTree = "<group>"; };
-		D55E8FAD1828D2360076A9D7 /* Constellation-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Constellation-Info.plist"; sourceTree = "<group>"; };
-		D55E8FAE1828D2360076A9D7 /* Constellation-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Constellation-Prefix.pch"; sourceTree = "<group>"; };
+		D55E8FAD1828D2360076A9D7 /* SpaceTime-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SpaceTime-Info.plist"; sourceTree = "<group>"; };
+		D55E8FAE1828D2360076A9D7 /* SpaceTime-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SpaceTime-Prefix.pch"; sourceTree = "<group>"; };
 		D55E8FB01828D2360076A9D7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D55E8FB11828D2360076A9D7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D55E8FC81828D23C0076A9D7 /* PanoramaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramaTests.m; sourceTree = "<group>"; };
 		D55E8FCA1828D23C0076A9D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D55E8FCB1828D23D0076A9D7 /* ConstellationTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConstellationTests-Info.plist"; sourceTree = "<group>"; };
+		D55E8FCB1828D23D0076A9D7 /* SpaceTimeTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SpaceTimeTests-Info.plist"; sourceTree = "<group>"; };
 		D55E8FD41828D3F50076A9D7 /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
 		D55E8FD51828D3F50076A9D7 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
 		D55E8FD61828D3F50076A9D7 /* 144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 144.png; sourceTree = "<group>"; };
@@ -215,11 +216,12 @@
 		D5D7C0191A0E998E003B4987 /* delorean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delorean.png; sourceTree = "<group>"; };
 		D5D7C01B1A0E9A1E003B4987 /* Delorean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delorean.h; sourceTree = "<group>"; };
 		D5D7C01C1A0E9A24003B4987 /* Delorean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Delorean.m; sourceTree = "<group>"; };
-		D5FAE07517C8956600AE6EC9 /* Constellation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Constellation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5DB6FF31A111A46006594F9 /* Incos_comma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Incos_comma.png; sourceTree = "<group>"; };
+		D5FAE07517C8956600AE6EC9 /* SpaceTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FAE07817C8956600AE6EC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D5FAE07A17C8956600AE6EC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D5FAE07C17C8956600AE6EC9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		D5FAE09917C8956600AE6EC9 /* ConstellationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConstellationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5FAE09917C8956600AE6EC9 /* SpaceTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FAE09A17C8956600AE6EC9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D5FAE0B017C895AB00AE6EC9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		D5FAE0B217C895B200AE6EC9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -281,7 +283,7 @@
 			children = (
 				D55E8FC81828D23C0076A9D7 /* PanoramaTests.m */,
 				D55E8FC91828D23C0076A9D7 /* InfoPlist.strings */,
-				D55E8FCB1828D23D0076A9D7 /* ConstellationTests-Info.plist */,
+				D55E8FCB1828D23D0076A9D7 /* SpaceTimeTests-Info.plist */,
 			);
 			path = PanoramaTests;
 			sourceTree = "<group>";
@@ -301,9 +303,9 @@
 			children = (
 				D55E8FD31828D3F50076A9D7 /* icons */,
 				D55E8FA71828D2360076A9D7 /* main.m */,
-				D55E8FAD1828D2360076A9D7 /* Constellation-Info.plist */,
+				D55E8FAD1828D2360076A9D7 /* SpaceTime-Info.plist */,
 				D55E8F9A1828D2360076A9D7 /* InfoPlist.strings */,
-				D55E8FAE1828D2360076A9D7 /* Constellation-Prefix.pch */,
+				D55E8FAE1828D2360076A9D7 /* SpaceTime-Prefix.pch */,
 				D5C8B44B18A8E58700051A88 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
@@ -337,6 +339,7 @@
 		D5D7BF9A1A0E851C003B4987 /* letters */ = {
 			isa = PBXGroup;
 			children = (
+				D5DB6FF31A111A46006594F9 /* Incos_comma.png */,
 				D5D7BF9B1A0E851C003B4987 /* Incos_Cap_a.png */,
 				D5D7BF9C1A0E851C003B4987 /* Incos_Cap_b.png */,
 				D5D7BF9D1A0E851C003B4987 /* Incos_Cap_c.png */,
@@ -417,8 +420,8 @@
 		D5FAE07617C8956600AE6EC9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5FAE07517C8956600AE6EC9 /* Constellation.app */,
-				D5FAE09917C8956600AE6EC9 /* ConstellationTests.xctest */,
+				D5FAE07517C8956600AE6EC9 /* SpaceTime.app */,
+				D5FAE09917C8956600AE6EC9 /* SpaceTimeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -440,9 +443,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5FAE07417C8956600AE6EC9 /* Constellation */ = {
+		D5FAE07417C8956600AE6EC9 /* SpaceTime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5FAE0AA17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "Constellation" */;
+			buildConfigurationList = D5FAE0AA17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "SpaceTime" */;
 			buildPhases = (
 				D5FAE07117C8956600AE6EC9 /* Sources */,
 				D5FAE07217C8956600AE6EC9 /* Frameworks */,
@@ -452,14 +455,14 @@
 			);
 			dependencies = (
 			);
-			name = Constellation;
+			name = SpaceTime;
 			productName = "360 Panorama";
-			productReference = D5FAE07517C8956600AE6EC9 /* Constellation.app */;
+			productReference = D5FAE07517C8956600AE6EC9 /* SpaceTime.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D5FAE09817C8956600AE6EC9 /* ConstellationTests */ = {
+		D5FAE09817C8956600AE6EC9 /* SpaceTimeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5FAE0AD17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "ConstellationTests" */;
+			buildConfigurationList = D5FAE0AD17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "SpaceTimeTests" */;
 			buildPhases = (
 				D5FAE09517C8956600AE6EC9 /* Sources */,
 				D5FAE09617C8956600AE6EC9 /* Frameworks */,
@@ -470,9 +473,9 @@
 			dependencies = (
 				D5FAE09F17C8956600AE6EC9 /* PBXTargetDependency */,
 			);
-			name = ConstellationTests;
+			name = SpaceTimeTests;
 			productName = "360 PanoramaTests";
-			productReference = D5FAE09917C8956600AE6EC9 /* ConstellationTests.xctest */;
+			productReference = D5FAE09917C8956600AE6EC9 /* SpaceTimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -492,7 +495,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D5FAE07017C8956600AE6EC9 /* Build configuration list for PBXProject "Constellation" */;
+			buildConfigurationList = D5FAE07017C8956600AE6EC9 /* Build configuration list for PBXProject "SpaceTime" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -505,8 +508,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5FAE07417C8956600AE6EC9 /* Constellation */,
-				D5FAE09817C8956600AE6EC9 /* ConstellationTests */,
+				D5FAE07417C8956600AE6EC9 /* SpaceTime */,
+				D5FAE09817C8956600AE6EC9 /* SpaceTimeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -565,6 +568,7 @@
 				D571EAA51A0DC2680085052A /* Tycho_2048_city.png in Resources */,
 				D571EAA81A0DD3EB0085052A /* visible_stars_hacky.csv in Resources */,
 				D5D7C0131A0E9207003B4987 /* Incos_num_4.png in Resources */,
+				D5DB6FF41A111A46006594F9 /* Incos_comma.png in Resources */,
 				D5D7BFD51A0E851C003B4987 /* Incos_Cap_f.png in Resources */,
 				D5D7BFEF1A0E851C003B4987 /* Incos_lower_f.png in Resources */,
 				D5D7BFD21A0E851C003B4987 /* Incos_Cap_c.png in Resources */,
@@ -637,7 +641,7 @@
 /* Begin PBXTargetDependency section */
 		D5FAE09F17C8956600AE6EC9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5FAE07417C8956600AE6EC9 /* Constellation */;
+			target = D5FAE07417C8956600AE6EC9 /* SpaceTime */;
 			targetProxy = D5FAE09E17C8956600AE6EC9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -741,10 +745,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Panorama/Constellation-Prefix.pch";
-				INFOPLIST_FILE = "Panorama/Constellation-Info.plist";
+				GCC_PREFIX_HEADER = "Panorama/SpaceTime-Prefix.pch";
+				INFOPLIST_FILE = "Panorama/SpaceTime-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = Constellation;
+				PRODUCT_NAME = SpaceTime;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -759,10 +763,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Panorama/Constellation-Prefix.pch";
-				INFOPLIST_FILE = "Panorama/Constellation-Info.plist";
+				GCC_PREFIX_HEADER = "Panorama/SpaceTime-Prefix.pch";
+				INFOPLIST_FILE = "Panorama/SpaceTime-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = Constellation;
+				PRODUCT_NAME = SpaceTime;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -783,8 +787,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "PanoramaTests/ConstellationTests-Info.plist";
-				PRODUCT_NAME = ConstellationTests;
+				INFOPLIST_FILE = "PanoramaTests/SpaceTimeTests-Info.plist";
+				PRODUCT_NAME = SpaceTimeTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -801,8 +805,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Panorama/Constellation-Prefix.pch";
-				INFOPLIST_FILE = "PanoramaTests/ConstellationTests-Info.plist";
-				PRODUCT_NAME = ConstellationTests;
+				INFOPLIST_FILE = "PanoramaTests/SpaceTimeTests-Info.plist";
+				PRODUCT_NAME = SpaceTimeTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -811,7 +815,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5FAE07017C8956600AE6EC9 /* Build configuration list for PBXProject "Constellation" */ = {
+		D5FAE07017C8956600AE6EC9 /* Build configuration list for PBXProject "SpaceTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5FAE0A817C8956600AE6EC9 /* Debug */,
@@ -820,7 +824,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5FAE0AA17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "Constellation" */ = {
+		D5FAE0AA17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "SpaceTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5FAE0AB17C8956600AE6EC9 /* Debug */,
@@ -829,7 +833,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5FAE0AD17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "ConstellationTests" */ = {
+		D5FAE0AD17C8956600AE6EC9 /* Build configuration list for PBXNativeTarget "SpaceTimeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5FAE0AE17C8956600AE6EC9 /* Debug */,

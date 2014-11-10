@@ -301,10 +301,16 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
     float millionsOfYears = delorean.x*.2;
 //    NSLog(@"%f+.02014",millionsOfYears);
     [self updateStars:millionsOfYears*.1];
-    if(millionsOfYears+.02014 < 0)
-        [year setText:[NSString stringWithFormat:@"%d BCE",(int)(millionsOfYears*100000 + 2014)]];
+    NSNumber *yearNum = [NSNumber numberWithInteger:(int)(millionsOfYears*100000 + 2014)];
+    NSString *formatted;
+    if(!([yearNum integerValue] <= 10000 && [yearNum integerValue] >= -10000))
+        formatted = [NSNumberFormatter localizedStringFromNumber:yearNum numberStyle:NSNumberFormatterDecimalStyle];
     else
-    [year setText:[NSString stringWithFormat:@"%d CE",(int)(millionsOfYears*100000 + 2014)]];
+        formatted = [NSString stringWithFormat:@"%@",yearNum];
+    if(millionsOfYears+.02014 < 0)
+        [year setText:[NSString stringWithFormat:@"%@ BCE",formatted]];
+    else
+    [year setText:[NSString stringWithFormat:@"%@ CE",formatted]];
 //    }
 }
 

@@ -94,13 +94,14 @@
                     [self loadTexture:[NUM stringByAppendingString:@"7.png"]], @"7",
                     [self loadTexture:[NUM stringByAppendingString:@"8.png"]], @"8",
                     [self loadTexture:[NUM stringByAppendingString:@"9.png"]], @"9",
-                    [self loadTexture:@"Incos_space.png"], @" ",nil];
+                    [self loadTexture:@"Incos_space.png"], @" ",
+                    [self loadTexture:@"Incos_comma.png"], @",",nil];
     }
     return self;
 }
 
 -(void) setText:(NSString *)text{
-    NSString *validCharacters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ";
+    NSString *validCharacters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789, ";
     NSMutableArray *textureArray = [NSMutableArray array];
     for(int i = 0; i < text.length; i++){
         NSString *letter = [[text substringWithRange:NSMakeRange(i, 1)] uppercaseString];

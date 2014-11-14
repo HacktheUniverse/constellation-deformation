@@ -38,7 +38,7 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
     unsigned int numConstellations;
     unsigned short *constellationMeta;
     unsigned int numConstellationMeta;
-    Word *message, *year;
+    Word *message, *year, *loading;
     Delorean *delorean;
     NSTimer *sceneAnimation;
     float titleColor;
@@ -54,8 +54,6 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
     [super viewDidLoad];
     width = [[UIScreen mainScreen] bounds].size.width;
     height = [[UIScreen mainScreen] bounds].size.height;
-
-    [self loadStars];
     panoramaView = [[PanoramaView alloc] init];
     [panoramaView setImage:@"tycho_cyl_glow.png"];
     [panoramaView setOrientToDevice:YES];
@@ -64,6 +62,10 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
     [panoramaView setTouchToPan:YES];
     [panoramaView setDelegater:self];
     [self setView:panoramaView];
+
+    loading = [[Word alloc] initWithString:@"LOADING"];
+    
+    [self loadStars];
     
     message = [[Word alloc] initWithString:@"SPACE TIME"];
     year = [[Word alloc] initWithString:@"2014"];
@@ -177,6 +179,7 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
         sceneAnimation = nil;
         sceneAnimation = [NSTimer scheduledTimerWithTimeInterval:1.0/60.0 target:self selector:@selector(scene2Animation) userInfo:nil repeats:YES];
     }
+    loading = nil;
 }
 
 -(void) scene2Animation{
@@ -257,6 +260,12 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
 //    glTranslatef(-100, -100, 0);
     [delorean execute];
     glPopMatrix();
+    
+    if(loading){
+        glPushMatrix();
+        glTranslatef(0.0f, 0.0f, -20.0f);
+        [loading execute];
+    }
 
     
     if(titleColor != 0.0f){

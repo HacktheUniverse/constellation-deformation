@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D540F6631A166B34003C2E67 /* visible_stars_small.csv in Resources */ = {isa = PBXBuildFile; fileRef = D540F6621A166B34003C2E67 /* visible_stars_small.csv */; };
 		D55E8FB21828D2360076A9D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D55E8F951828D2360076A9D7 /* AppDelegate.m */; };
 		D55E8FB61828D2360076A9D7 /* equirectangular-projection-lines.png in Resources */ = {isa = PBXBuildFile; fileRef = D55E8F9C1828D2360076A9D7 /* equirectangular-projection-lines.png */; };
 		D55E8FC01828D2360076A9D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D55E8FA71828D2360076A9D7 /* main.m */; };
@@ -25,7 +26,6 @@
 		D55E8FE51828D3F50076A9D7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D55E8FDC1828D3F50076A9D7 /* icon.png */; };
 		D571EAA51A0DC2680085052A /* Tycho_2048_city.png in Resources */ = {isa = PBXBuildFile; fileRef = D571EAA31A0DC2680085052A /* Tycho_2048_city.png */; };
 		D571EAA61A0DC2680085052A /* tycho_cyl_glow.png in Resources */ = {isa = PBXBuildFile; fileRef = D571EAA41A0DC2680085052A /* tycho_cyl_glow.png */; };
-		D571EAA81A0DD3EB0085052A /* visible_stars_hacky.csv in Resources */ = {isa = PBXBuildFile; fileRef = D571EAA71A0DD3EB0085052A /* visible_stars_hacky.csv */; };
 		D571EAAD1A0DDAE80085052A /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D571EAAC1A0DDAE80085052A /* CHCSVParser.m */; };
 		D571EAAF1A0DE3990085052A /* visible_stars.csv in Resources */ = {isa = PBXBuildFile; fileRef = D571EAAE1A0DE3980085052A /* visible_stars.csv */; };
 		D5C8B44C18A8E58700051A88 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C8B44B18A8E58700051A88 /* Default-568h@2x.png */; };
@@ -117,6 +117,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D540F6621A166B34003C2E67 /* visible_stars_small.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = visible_stars_small.csv; path = data/visible_stars_small.csv; sourceTree = SOURCE_ROOT; };
 		D55E8F941828D2360076A9D7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D55E8F951828D2360076A9D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D55E8F9B1828D2360076A9D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -142,7 +143,6 @@
 		D55E8FDC1828D3F50076A9D7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		D571EAA31A0DC2680085052A /* Tycho_2048_city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tycho_2048_city.png; sourceTree = "<group>"; };
 		D571EAA41A0DC2680085052A /* tycho_cyl_glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tycho_cyl_glow.png; sourceTree = "<group>"; };
-		D571EAA71A0DD3EB0085052A /* visible_stars_hacky.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = visible_stars_hacky.csv; path = data/visible_stars_hacky.csv; sourceTree = SOURCE_ROOT; };
 		D571EAAB1A0DDAE80085052A /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		D571EAAC1A0DDAE80085052A /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		D571EAAE1A0DE3980085052A /* visible_stars.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = visible_stars.csv; path = data/visible_stars.csv; sourceTree = SOURCE_ROOT; };
@@ -262,7 +262,7 @@
 				D55E8FB11828D2360076A9D7 /* ViewController.m */,
 				D5D7BF201A0E1926003B4987 /* constellations.json */,
 				D571EAAE1A0DE3980085052A /* visible_stars.csv */,
-				D571EAA71A0DD3EB0085052A /* visible_stars_hacky.csv */,
+				D540F6621A166B34003C2E67 /* visible_stars_small.csv */,
 				D55E8FA81828D2360076A9D7 /* PanoramaView.h */,
 				D55E8FA91828D2360076A9D7 /* PanoramaView.m */,
 				D5D7C01B1A0E9A1E003B4987 /* Delorean.h */,
@@ -562,11 +562,11 @@
 				D5D7BFF41A0E851C003B4987 /* Incos_lower_k.png in Resources */,
 				D5D7BFF11A0E851C003B4987 /* Incos_lower_h.png in Resources */,
 				D5D7C0001A0E851C003B4987 /* Incos_lower_w.png in Resources */,
+				D540F6631A166B34003C2E67 /* visible_stars_small.csv in Resources */,
 				D5D7C0181A0E9207003B4987 /* Incos_num_9.png in Resources */,
 				D55E8FE51828D3F50076A9D7 /* icon.png in Resources */,
 				D5D7BFDD1A0E851C003B4987 /* Incos_Cap_n.png in Resources */,
 				D571EAA51A0DC2680085052A /* Tycho_2048_city.png in Resources */,
-				D571EAA81A0DD3EB0085052A /* visible_stars_hacky.csv in Resources */,
 				D5D7C0131A0E9207003B4987 /* Incos_num_4.png in Resources */,
 				D5DB6FF41A111A46006594F9 /* Incos_comma.png in Resources */,
 				D5D7BFD51A0E851C003B4987 /* Incos_Cap_f.png in Resources */,

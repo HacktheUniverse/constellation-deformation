@@ -164,7 +164,7 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
         [sceneAnimation invalidate];
         sceneAnimation = nil;
         delorean.x = 0;
-        delorean.y = -18;
+        delorean.y = -20;
     }
 }
 
@@ -216,25 +216,19 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
     
     glPopMatrix(); // end device orientation
     
-    if(delorean.y == -18){
+    if(delorean.y == -20){
         glColor4f(0.33, 0.33, 0.33, 1.0f);
         glPushMatrix();
-        glTranslatef(-year.width*.5, 27, -30);
+        glTranslatef(-year.width*.5, 20, -20);
         [year execute];
         glPopMatrix();
     }
     
-//    [self enterOrthographic];
-    
-    glColor4f(0.5, 0.5, 0.5, 1.0f);
+    glColor4f(0.75, 0.75, 0.75, 1.0f);
     glPushMatrix();
-//    glScalef(100, 100, 100);
-//    glScalef((arc4random()%100)/100.0*500-250, (arc4random()%100)/100.0*500-250, 1);
-//    glTranslatef((arc4random()%100)/100.0*50-25, (arc4random()%100)/100.0*50-25, 0);
-    glTranslatef(delorean.x, delorean.y, -20);
-//    glTranslatef(0, 0, -20);
-//    glTranslatef(-100, -100, 0);
-    [delorean execute];
+        glTranslatef(delorean.x+2.5, delorean.y, -20);
+        glScalef(2.5, 2.5, 1.0);
+        [delorean execute];
     glPopMatrix();
     
     if(loading){
@@ -244,7 +238,6 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
         glPopMatrix();
     }
 
-    
     if(titleColor != 0.0f){
         glColor4f(titleColor, titleColor, titleColor, 1.0f);
         glPushMatrix();
@@ -253,8 +246,6 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
         [message execute];
         glPopMatrix();
     }
-
-//    [self exitOrthographic];
 }
 
 -(void)enterOrthographic{
@@ -275,12 +266,15 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
 }
 
 -(void) panStart{
+    
+    _delorianStartX = delorean.x;
+    
 //    if(CGRectCircleContainsPoint(CGPointMake([[UIScreen mainScreen] bounds].size.width*.5, [[UIScreen mainScreen] bounds].size.height*.5), BUTTON_RADIUS, [touch locationInView:self.view])){
             // button: touch down
-            NSLog(@"touch");
+//            NSLog(@"touch");
 //            if(!_buttonTouched){
 //                [self setButtonTouched:YES];
-                _delorianStartX = delorean.x;
+//                _delorianStartX = delorean.x;
 //            }
 //        }
 //        else if(CGRectCircleContainsPoint(CGPointMake([[UIScreen mainScreen] bounds].size.width*.9, [[UIScreen mainScreen] bounds].size.height*.5), 40, [touch locationInView:self.view])){

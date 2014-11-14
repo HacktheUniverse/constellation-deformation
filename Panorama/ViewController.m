@@ -33,6 +33,7 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
     float *stars, *velocities, *starsNow;
     float *mag;
     unsigned int numStars;
+    BOOL starsLoaded;
     NSTimer *increment;
     unsigned short *constellations;
     unsigned int numConstellations;
@@ -44,7 +45,6 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
     float titleColor;
     float width, height;
     float titleZ;
-    
 }
 @end
 
@@ -65,18 +65,13 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
 
     loading = [[Word alloc] initWithString:@"LOADING"];
     
-    [self loadStars];
-    
+    [self performSelectorInBackground:@selector(loadStars) withObject:nil];
+
     message = [[Word alloc] initWithString:@"SPACE TIME"];
     year = [[Word alloc] initWithString:@"2014"];
     delorean = [[Delorean alloc] init];
     delorean.y = 300;
     titleColor = 0.25;
-    
-    [self performSelector:@selector(scene0) withObject:nil afterDelay:1.0];
-
-//    [self performSelector:@selector(scene1) withObject:nil afterDelay:2.0];
-
 }
 //id,x,y,z,colorb_v,lum,absmag,appmag,texnum,distly,dcalc,plx,plxerr,vx,vy,vz,speed,hipnum,name
 -(void)loadStars{
@@ -98,7 +93,6 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
         cArray = [CONSTELLATION_ARRAY_STRING componentsSeparatedByString:@", "];
     else
         cArray = [CONSTELLATION_ARRAY_SMALL_STRING componentsSeparatedByString:@", "];
-    for(int i = 0; i < cArray.count; i++) if([cArray[i] integerValue] > 1600) NSLog(@"%@",cArray[i]);
     NSArray *cMetaArray = [CONSTELLATION_META_STRING componentsSeparatedByString:@", "];
     numConstellations = (unsigned int)cArray.count;
     numConstellationMeta = (unsigned int)cMetaArray.count;
@@ -134,6 +128,11 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
     }
     [self updateStars:0];
 //    increment = [NSTimer scheduledTimerWithTimeInterval:1.0/30 target:self selector:@selector(incrementStars) userInfo:nil repeats:YES];
+
+    // LOADING COMPLETE
+    starsLoaded = true;
+    loading = nil;
+    [self performSelectorOnMainThread:@selector(scene0) withObject:nil waitUntilDone:NO];
 }
 
 -(void) incrementStars{
@@ -146,43 +145,19 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
 
 -(void) scene0{
     sceneAnimation = [NSTimer scheduledTimerWithTimeInterval:1.0/60.0 target:self selector:@selector(scene0Animation) userInfo:nil repeats:YES];
-    [self performSelector:@selector(showDelorean) withObject:nil afterDelay:1.0];
-}
-
--(void) showDelorean{
-    delorean.y = 3;
 }
 
 -(void) scene0Animation{
-    if(titleZ > -18)
-        titleZ -= .2;
-    else
-        titleZ -= .05;
-    if(titleZ < -20){
-        titleZ = -20;
+    titleZ -= .3;  // speed
+    if(titleZ < -30){
         [sceneAnimation invalidate];
         sceneAnimation = nil;
         sceneAnimation = [NSTimer scheduledTimerWithTimeInterval:1.0/60.0 target:self selector:@selector(scene1Animation) userInfo:nil repeats:YES];
     }
 }
 
-//-(void) scene1{
-//    sceneAnimation = [NSTimer scheduledTimerWithTimeInterval:1.0/60.0 target:self selector:@selector(scene1Animation) userInfo:nil repeats:YES];
-//}
-
 -(void) scene1Animation{
-    static float xpos = 0.1;
-    delorean.x += xpos;
-    xpos += 0.1;
-    if(delorean.x > 20){
-        [sceneAnimation invalidate];
-        sceneAnimation = nil;
-        sceneAnimation = [NSTimer scheduledTimerWithTimeInterval:1.0/60.0 target:self selector:@selector(scene2Animation) userInfo:nil repeats:YES];
-    }
-    loading = nil;
-}
-
--(void) scene2Animation{
+    titleZ -= .3;  // incorporate animation from scene0animation
     titleColor -=.01;
     if(titleColor < 0.0){
         titleColor = 0.0;
@@ -212,9 +187,9 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
 
 //        [panoramaView draw];
     
+    if(starsLoaded){
         glPushMatrix();
             // object code
-    
 // constellation lines
             float lin = 0.25f;
             glColor4f(lin, lin, lin, 1.0f);
@@ -237,8 +212,9 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
             }
 
         glPopMatrix();
-    glPopMatrix(); // end device orientation
+    }  // end stars
     
+    glPopMatrix(); // end device orientation
     
     if(delorean.y == -18){
         glColor4f(0.33, 0.33, 0.33, 1.0f);
@@ -263,8 +239,9 @@ bool CGRectCircleContainsPoint(CGPoint center, float radius, CGPoint point){
     
     if(loading){
         glPushMatrix();
-        glTranslatef(0.0f, 0.0f, -20.0f);
+        glTranslatef(-loading.width*.5, 0.0f, -20.0f);
         [loading execute];
+        glPopMatrix();
     }
 
     

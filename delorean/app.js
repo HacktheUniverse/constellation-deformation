@@ -135,12 +135,12 @@ function scale_time(value) {
   //if -1 return -10E-6
   //if 1 return 10E-6
   //2 return 10E-5
-  //3 
+  //3
+  if (value == 0) return 0;
 
   var value = value/100.0;
 
   var is_negative = value < 0;
-
 
   var one_year = Math.pow(10, -6);
   var log_input = Math.pow(10, Math.abs(value));
@@ -166,7 +166,7 @@ function addCommas(nStr)
 }
 
 function timeToYear(time) {
-  var currentYear = 2014;
+  var currentYear = new Date().getUTCFullYear();
   var output_year = currentYear + (time * 1000000)
   output_year = Math.round(output_year);
   if (output_year < 0) {

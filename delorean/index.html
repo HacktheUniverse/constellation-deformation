@@ -38,7 +38,7 @@ input[type=range]::-webkit-slider-thumb {
     border: none;
     height: 40px;
     width: 100px;
-    background-image: url('img/delorean.png');
+    background-image: url('src/img/delorean.png');
     background-size: contain;
     background-repeat: no-repeat;
     margin-top: -37px;
@@ -140,18 +140,9 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     <input type='range' id='time_slider' class='slider_dude' value='0' max='650' min='-650'></input>
     
     <div id='output'></div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-    <script src='vendor/underscore-min.js'></script>
-    <script src="vendor/stats.min.js"></script>
-    <script src="vendor/three.min.js"></script>
-    
-    
-    <script src="app.js"></script>
-    
-    <script type="text/javascript">
-    </script>
 
-    
+    <script src="dist/all.js"></script>
 
+    <script src="src/app.js"></script>
   </body>
 </html>

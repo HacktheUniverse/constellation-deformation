@@ -1,0 +1,21 @@
+{
+  "name": "delorean",
+  "description": "SPACE",
+  "repository": "https://github.com/HacktheUniverse/constellation-deformation/",
+  "scripts": {
+    "gulp": "./node_modules/gulp/bin/gulp.js"
+  },
+  "contributors": [
+    {
+      "name": "Pam Selle",
+      "url": "http://thewebivore.com"
+    },
+    {
+      "name": "Nate Lash",
+      "url": "https://github.com/lashback"
+    }
+  ],
+  "devDependencies": {
+    "gulp-concat": "^2.5.2"
+  }
+}

@@ -23,10 +23,9 @@ function init() {
   fetch('data/stupidNumberOfStars.json').then(function(response) {
     return response.json()
   }).then(function (stars) {
-  //$.getJSON('data/stars.json', function(stars) {
     // For messing w data
-    window.stars = stars;
-    window.star = stars[1];
+    // window.stars = stars;
+    // window.star = stars[1];
 
     $('h1').remove();
 
